@@ -41,7 +41,8 @@ function getRandomColor() {
 
 function setBackgroundColor() {
     var color = getRandomColor();
-    document.getElementById("main").style.backgroundImage = "linear-gradient(135deg, " + color[0] + " 10%" + ", " + color[1] + " 100%" + ")";
+
+    document.getElementById("main").style.backgroundImage = "linear-gradient(to right bottom, " + color[0] + " 10%" + ", " + color[1] + " 100%" + ")";
     // document.getElementById("circle1").style.background = color[1];
     // document.getElementById("circle2").style.background = color[1];
 }
