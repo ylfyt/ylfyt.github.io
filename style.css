@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-.main {
+main {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -527,6 +527,11 @@ a {
     }
 }
 @media (max-width: 410px) {
+    body {
+        /* width: 100%; */
+        background-color: green;
+        overflow-x: hidden;
+    }
     .main {
         background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%);
         /* background: url("img/bg/bg4.jpg"); */
