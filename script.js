@@ -1,4 +1,4 @@
-function navLinkColl(){
+function navLinkColl() {
     // var bungkus = document.getElementById("navbarNavAltMarkup");
     // var button = document.getElementById("buttonNavbar");
     // if (bungkus.classList.contains("show"))
@@ -11,8 +11,7 @@ function navLinkColl(){
 
     var bungkuss = document.getElementsByClassName("navbar-collapse");
     var buttons = document.getElementsByClassName("navbar-toggler");
-    if (bungkuss[0].classList.contains("show"))
-    {
+    if (bungkuss[0].classList.contains("show")) {
         for (let i = 0; i < buttons.length; i++) {
             const element = buttons[i];
             element.classList.add("collapsed");
@@ -21,7 +20,7 @@ function navLinkColl(){
 
         for (let i = 0; i < bungkuss.length; i++) {
             const element = bungkuss[i];
-            element.classList.remove("show");   
+            element.classList.remove("show");
         }
     }
 }
@@ -43,7 +42,6 @@ function getRandomColor() {
 function setBackgroundColor() {
     var color = getRandomColor();
     document.getElementById("main").style.backgroundImage = "linear-gradient(135deg, " + color[0] + " 10%" + ", " + color[1] + " 100%" + ")";
-    document.getElementById("circle1").style.background = color[1];
-    document.getElementById("circle2").style.background = color[1];
+    // document.getElementById("circle1").style.background = color[1];
+    // document.getElementById("circle2").style.background = color[1];
 }
-

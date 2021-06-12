@@ -17,11 +17,11 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%); */
-    background: url("img/bg/bg1.jpg");
+    background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%);
+    /* background: url("img/bg/bg1.jpg");
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 ::selection {
     /* color: #f2f2f2; */
@@ -527,11 +527,11 @@ a {
 }
 @media (max-width: 410px) {
     main {
-        /* background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%); */
-        background: url("img/bg/bg4.jpg");
+        background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%);
+        /* background: url("img/bg/bg4.jpg");
         background-attachment: fixed;
         background-size: cover;
-        background-position: center;
+        background-position: center; */
         /* width: 100%;
         min-height: 100vh; */
     }
