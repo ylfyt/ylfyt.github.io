@@ -7,9 +7,11 @@
     transition: all 0.3s ease;
 }
 
+html,
 body {
-    background-color: greenyellow;
-    /* overflow-x: hidden; */
+    background-color: red;
+    position: relative;
+    overflow-x: hidden;
 }
 
 main {
