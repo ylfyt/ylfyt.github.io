@@ -9,7 +9,7 @@
 
 html,
 body {
-    background-color: red;
+    /* background-color: red; */
     position: relative;
     overflow-x: hidden;
 }
