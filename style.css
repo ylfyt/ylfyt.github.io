@@ -532,7 +532,7 @@ a {
         background-color: green;
         overflow-x: hidden;
     }
-    .main {
+    main {
         background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%);
         /* background: url("img/bg/bg4.jpg"); */
         background-attachment: fixed;
