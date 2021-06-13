@@ -141,20 +141,53 @@ main {
 
 /* HOME PAGE */
 .home .glass .contents {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: green; */
+    height: 75vh;
 }
 .home .contents .profile {
+    /* text-align: center; */
+    width: 50%;
     text-align: center;
+    /* background-color: red; */
 }
 
 .home .contents .profile img {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
 }
 .home .contents .quotes {
-    margin-top: 35px;
-    /* margin-bottom: 30px; */
+    width: 50%;
+    /* background-color: yellow; */
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+    width: 160px;
+    height: 60px;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-button i {
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+.contact-button:hover {
+    color: white;
 }
 
 .home .contents .profile h3 {
@@ -403,6 +436,21 @@ a {
 /* END iconSet */
 
 @media (max-width: 960px) {
+    /* HOME */
+    .home .contents {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home .contents .profile {
+        width: 100%;
+    }
+    .home .contents .quotes {
+        margin-top: 2rem;
+        width: 100%;
+    }
+    /* END HOME */
+
     /* contact */
     .contact .glass .contents {
         display: flex;
