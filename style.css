@@ -15,11 +15,12 @@ body {
 }
 
 footer {
-    text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: red;
 }
 
 main {
