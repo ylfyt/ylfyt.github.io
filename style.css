@@ -185,6 +185,7 @@ main {
 .home .contents .quotes {
     width: 50%;
     /* background-color: yellow; */
+    /* padding: 1rem; */
 }
 
 .contact-button {
@@ -236,6 +237,7 @@ main {
 
 .desc {
     /* background-color: red; */
+    /* padding: 1rem; */
 }
 
 .skills {
@@ -470,6 +472,7 @@ a {
     .home .contents .quotes {
         margin-top: 2rem;
         width: 100%;
+        padding: 1rem;
     }
     /* END HOME */
 
@@ -488,6 +491,10 @@ a {
     .skills {
         width: 100%;
         padding-top: 20px;
+    }
+
+    .desc {
+        padding: 1rem;
     }
 
     .iconSet .icon span {
