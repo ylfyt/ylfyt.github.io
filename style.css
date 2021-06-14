@@ -27,11 +27,16 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right bottom, #ff9a9e 10%, #f6416c 100%);
-    /* background: url("img/bg/bg1.jpg");
+    background-image: linear-gradient(to right bottom, #ffd89b, #19547b);
+
+    background: #12c2e9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left top, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left top, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background: url("img/bg/bg1.jpg"); */
     background-attachment: fixed;
     background-size: cover;
-    background-position: center; */
+    background-position: center;
 }
 ::selection {
     /* color: #f2f2f2; */
@@ -74,6 +79,10 @@ main {
     color: #000;
     font-weight: 500;
 }
+
+/* =========================CIRCLE========================== */
+
+/* ========================END CIRCLE======================= */
 
 /* BOOTSTRAP */
 
@@ -581,12 +590,6 @@ a {
         line-height: 60px;
         font-size: 25px;
     }
-
-    .circle1,
-    .circle2 {
-        width: 200px;
-        height: 200px;
-    }
 }
 @media (max-width: 410px) {
     main {
@@ -622,11 +625,5 @@ a {
     .contact .glass .contents {
         display: flex;
         flex-direction: column;
-    }
-
-    .circle1,
-    .circle2 {
-        width: 150px;
-        height: 150px;
     }
 }
