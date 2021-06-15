@@ -143,6 +143,11 @@ main {
     /* background-color: white; */
 }
 
+.contents h1 {
+    font-size: 27px;
+    font-weight: 500;
+}
+
 .contents h2 {
     font-size: 27px;
     font-weight: 600;
@@ -237,12 +242,18 @@ main {
 
 .desc {
     /* background-color: red; */
-    /* padding: 1rem; */
+    padding: 3rem;
 }
 
 .skills {
     text-align: center;
     /* background-color: green; */
+}
+
+.skills h1 {
+    text-align: center;
+    /* background-color: green; */
+    font-weight: 600;
 }
 
 .tools {
