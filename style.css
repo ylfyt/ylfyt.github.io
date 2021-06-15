@@ -245,6 +245,10 @@ main {
     padding: 3rem;
 }
 
+.desc h2 {
+    font-weight: 400;
+}
+
 .skills {
     text-align: center;
     /* background-color: green; */
