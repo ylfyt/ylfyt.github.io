@@ -188,7 +188,7 @@ main {
     /* padding: 1rem; */
 }
 
-.contact-button {
+.custom-button {
     display: flex;
     align-items: center;
     text-align: center;
@@ -204,12 +204,12 @@ main {
     font-weight: 500;
 }
 
-.contact-button i {
+.custom-button i {
     font-size: 25px;
     margin-left: 5px;
 }
 
-.contact-button:hover {
+.custom-button:hover {
     color: white;
 }
 
