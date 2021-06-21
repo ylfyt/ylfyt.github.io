@@ -34,9 +34,9 @@ main {
     background: linear-gradient(to left top, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     /* background: url("img/bg/bg1.jpg"); */
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+    /* background-position: center; */
 }
 ::selection {
     /* color: #f2f2f2; */
