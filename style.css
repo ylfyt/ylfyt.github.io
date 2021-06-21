@@ -52,7 +52,6 @@ main {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
     z-index: 12;
     border-radius: 25px;
     margin: auto;
@@ -270,7 +269,6 @@ main {
     border-radius: 10px;
     border: none;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-    /* backdrop-filter: blur(5px); */
 }
 /* PORTFOLIO */
 
@@ -382,7 +380,6 @@ a {
 .wrapper .social:hover span,
 .wrapper .social:hover .tooltip {
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
 }
 
 /* END SOCIAL MEDIA */
@@ -469,7 +466,6 @@ a {
 .icon3:hover span,
 .icon3:hover .tooltip {
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
 }
 
 /* END iconSet */
