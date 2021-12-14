@@ -1,3 +1,47 @@
+document.getElementById('send-button').addEventListener('click', () => {
+	const name = document.getElementById('name');
+	const email = document.getElementById('email');
+	const message = document.getElementById('message');
+	const errorField = document.getElementById('send-error');
+	if (name === '' || email === '' || message === '') {
+		errorField.innerText = 'Field cannot empty';
+		return;
+	}
+
+	errorField.innerText = 'Sending...';
+	const data = {
+		name: name.value,
+		email: email.value,
+		message: message.value,
+	};
+
+	document.getElementById('send-button').disabled = true;
+
+	fetch('https://script.google.com/macros/s/AKfycbxydZxoebQm2xQiTGOs5n1fM_OdWZi7hN37spluI1m2GfW5sGxu4So50nOCtojS3elR2A/exec', {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: {
+			'Content-type': 'text/plain',
+		},
+	})
+		.then((result) => result.text())
+		.then((result) => {
+			if (result === 'true') {
+				errorField.innerText = 'Message sent';
+				name.value = '';
+				email.value = '';
+				message.value = '';
+			} else {
+				errorField.innerText = 'Message failed to send';
+			}
+			document.getElementById('send-button').disabled = false;
+		})
+		.catch((error) => {
+			errorField.innerText = 'Message failed to send';
+			document.getElementById('send-button').disabled = false;
+		});
+});
+
 function navLinkColl() {
 	var bungkuss = document.getElementsByClassName('navbar-collapse');
 	var buttons = document.getElementsByClassName('navbar-toggler');

@@ -477,6 +477,26 @@ a {
 	background: rgba(255, 255, 255, 0.8);
 }
 
+#send-button {
+	padding: 10px 20px 10px 20px;
+	border: none;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#send-button:focus {
+	/* box-shadow: none; */
+}
+
+.send-email-action {
+	display: flex;
+	align-items: center;
+}
+
+#send-error {
+	margin-left: 20px;
+}
+
 /* END iconSet */
 
 @media (max-width: 960px) {
