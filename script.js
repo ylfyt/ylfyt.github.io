@@ -19,7 +19,7 @@ const getCard = (project) => {
 	const card = `
     <div class="col-md-4 mb-3">
 									<div class="card">
-										<img src="${project.image}" class="card-img-top" alt="Projects 3" />
+										<img src="img/projects/${project.image}" alt="Projects 3" />
 										<div class="card-body">
 											<p class="card-text">
 												${project.description}
@@ -32,7 +32,9 @@ const getCard = (project) => {
 	return card;
 };
 
-fetch('https://script.google.com/macros/s/AKfycbyg1Llm_Zo4p6n8aLlzJRNK1aZJ63yIzd0uqr5ZAcwuk5Y2J5uagG6f3ESGo-pOhigoCg/exec')
+document.getElementById('loading-message').innerText = 'Loading...';
+
+fetch('https://script.google.com/macros/s/AKfycbzkiYrofKoJ6-H5ad-k3-ftql2Wcg-VqXt8D_jWIqp75eXU1ZxTvMIU0v7_P1q7NQxwPg/exec')
 	.then((result) => result.json())
 	.then((result) => {
 		const projects = result.projects;
@@ -42,8 +44,8 @@ fetch('https://script.google.com/macros/s/AKfycbyg1Llm_Zo4p6n8aLlzJRNK1aZJ63yIzd
 			const card = getCard(project);
 			container.innerHTML += card;
 		}
+		document.getElementById('loading-message').remove();
 	})
 	.catch((error) => {
-		const container = document.getElementById('projects-container');
-		container.innerHTML += 'Failed to fecth';
+		document.getElementById('loading-message').innerText = 'Failed to fecth';
 	});
