@@ -17,16 +17,19 @@ function navLinkColl() {
 
 const getCard = (project) => {
 	const card = `
-    <div class="col-md-4 mb-3">
-									<div class="card">
-										<img src="img/projects/${project.image}" alt="Projects 3" />
-										<div class="card-body">
-											<p class="card-text">
-												${project.description}
-											</p>
-										</div>
-									</div>
-								</div>
+        <div class="col-md-4 mb-3">
+        <a href="${project.repository}" class="card-anchor" target="_blank">
+                                        <div class="card">
+                                            <img src="img/projects/${project.image}" alt="Projects 3" />
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    ${project.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+
     `;
 
 	return card;
