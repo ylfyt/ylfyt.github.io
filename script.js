@@ -17,7 +17,7 @@ document.getElementById('send-button').addEventListener('click', () => {
 
 	document.getElementById('send-button').disabled = true;
 
-	fetch('https://script.google.com/macros/s/AKfycbxydZxoebQm2xQiTGOs5n1fM_OdWZi7hN37spluI1m2GfW5sGxu4So50nOCtojS3elR2A/exec', {
+	fetch('https://script.google.com/macros/s/AKfycbwT7m_cp2keFPEMwNM5MMR_a48S5N41LG9w1iQ-zFMABv0YHZ-5y_c5rTSoiM082CF8tw/exec', {
 		method: 'POST',
 		body: JSON.stringify(data),
 		headers: {
