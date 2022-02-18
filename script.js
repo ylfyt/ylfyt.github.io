@@ -17,7 +17,7 @@ document.getElementById('send-button').addEventListener('click', () => {
 
 	document.getElementById('send-button').disabled = true;
 
-	fetch('https://script.google.com/macros/s/AKfycbwkziQwyUvvWiveTmhL7u1Wnme-KqzF-9Fee9gkPt-RRc9cVrVQ-24pqjnEWCeo7L9Opw/exec', {
+	fetch('https://script.google.com/macros/s/AKfycbxi-YF8VdT6mexJS6-1_GBhmvqIQkFloa6vZxTZTy2UJT6JiwDuvqROLmFoDZKmK_SX5w/exec', {
 		method: 'POST',
 		body: JSON.stringify(data),
 		headers: {
@@ -81,7 +81,7 @@ const getCard = (project) => {
 
 document.getElementById('loading-message').innerText = 'Loading...';
 
-fetch('https://script.google.com/macros/s/AKfycbwkziQwyUvvWiveTmhL7u1Wnme-KqzF-9Fee9gkPt-RRc9cVrVQ-24pqjnEWCeo7L9Opw/exec?password=null')
+fetch('https://script.google.com/macros/s/AKfycbxi-YF8VdT6mexJS6-1_GBhmvqIQkFloa6vZxTZTy2UJT6JiwDuvqROLmFoDZKmK_SX5w/exec?password=null')
 	.then((result) => result.json())
 	.then((result) => {
 		const projects = result.projects;
