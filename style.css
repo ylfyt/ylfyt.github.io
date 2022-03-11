@@ -323,7 +323,7 @@ button[type='submit'] {
 .wrapper {
 	display: inline-flex;
 	/* margin-top: 50px; */
-	padding-top: 15px;
+	/* padding-top: 15px; */
 }
 .wrapper .icon {
 	margin: 0 20px;

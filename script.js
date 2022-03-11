@@ -3,7 +3,7 @@ document.getElementById('send-button').addEventListener('click', () => {
 	const email = document.getElementById('email');
 	const message = document.getElementById('message');
 	const errorField = document.getElementById('send-error');
-	if (name === '' || email === '' || message === '') {
+	if (name.value === '' || email.value === '' || message.value === '') {
 		errorField.innerText = 'Field cannot empty';
 		return;
 	}
