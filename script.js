@@ -1,4 +1,9 @@
 const getCard = (project) => {
+	let tags = '';
+	project.tags.forEach((tag) => {
+		tags += `<div class="project-tag">${tag}</div>`;
+	});
+
 	const card = `
         <div class="col-md-4 mb-3">
         	<a href="${project.repository}" class="card-anchor" target="_blank">
@@ -7,6 +12,9 @@ const getCard = (project) => {
 					<div class="card-body">
                         <p class="card-text">${project.description}</p>
                     </div>
+					<div class="project-tags">
+						${tags}			
+					</div>
                 </div>
 			</a>
 		</div>
