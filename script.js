@@ -1,3 +1,26 @@
+const getCard = (project) => {
+	const card = `
+        <div class="col-md-4 mb-3">
+        	<a href="${project.repository}" class="card-anchor" target="_blank">
+                <div class="card">
+                    <img src="img/projects/${project.image}" alt="Projects 3" />
+					<div class="card-body">
+                        <p class="card-text">${project.description}</p>
+                    </div>
+                </div>
+			</a>
+		</div>
+
+    `;
+	return card;
+};
+
+const container = document.getElementById('projects-container');
+projects.forEach((project) => {
+	const card = getCard(project);
+	container.innerHTML += card;
+});
+
 document.getElementById('send-button').addEventListener('click', () => {
 	const name = document.getElementById('name');
 	const email = document.getElementById('email');
@@ -41,58 +64,3 @@ document.getElementById('send-button').addEventListener('click', () => {
 			document.getElementById('send-button').disabled = false;
 		});
 });
-
-function navLinkColl() {
-	var bungkuss = document.getElementsByClassName('navbar-collapse');
-	var buttons = document.getElementsByClassName('navbar-toggler');
-	if (bungkuss[0].classList.contains('show')) {
-		for (let i = 0; i < buttons.length; i++) {
-			const element = buttons[i];
-			element.classList.add('collapsed');
-			element.setAttribute('aria-expanded', false);
-		}
-
-		for (let i = 0; i < bungkuss.length; i++) {
-			const element = bungkuss[i];
-			element.classList.remove('show');
-		}
-	}
-}
-
-const getCard = (project) => {
-	const card = `
-        <div class="col-md-4 mb-3">
-        <a href="${project.repository}" class="card-anchor" target="_blank">
-                                        <div class="card">
-                                            <img src="img/projects/${project.image}" alt="Projects 3" />
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    ${project.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        </a>
-                                    </div>
-
-    `;
-
-	return card;
-};
-
-document.getElementById('loading-message').innerText = 'Loading...';
-
-fetch('https://script.google.com/macros/s/AKfycbxi-YF8VdT6mexJS6-1_GBhmvqIQkFloa6vZxTZTy2UJT6JiwDuvqROLmFoDZKmK_SX5w/exec?password=null')
-	.then((result) => result.json())
-	.then((result) => {
-		const projects = result.projects;
-		const container = document.getElementById('projects-container');
-		for (let i = 0; i < projects.length; i++) {
-			const project = projects[i];
-			const card = getCard(project);
-			container.innerHTML += card;
-		}
-		document.getElementById('loading-message').remove();
-	})
-	.catch((error) => {
-		document.getElementById('loading-message').innerText = 'Failed to fecth';
-	});
