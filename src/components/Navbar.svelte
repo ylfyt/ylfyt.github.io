@@ -13,6 +13,7 @@
 		justify-content: space-between;
 		padding-right: 30px;
 		padding-left: 30px;
+		margin-bottom: 10px;
 	}
 
 	.nav-brand {

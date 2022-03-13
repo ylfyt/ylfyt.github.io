@@ -2,9 +2,11 @@
 	import Navbar from './components/Navbar.svelte';
 </script>
 
-<Navbar />
-<main class="glass">
-	<p>Hello</p>
+<main>
+	<Navbar />
+	<div class="content glass">
+		<p>Hello</p>
+	</div>
 </main>
 
 <style>
@@ -35,5 +37,15 @@
 		border-left: 1px solid rgba(255, 255, 255, 0.5);
 		border-radius: 15px;
 		padding: 10px;
+	}
+
+	main {
+		padding: 20px;
+		height: 100vh;
+	}
+
+	.content {
+		height: 94%;
+		padding: 10px 20px;
 	}
 </style>
