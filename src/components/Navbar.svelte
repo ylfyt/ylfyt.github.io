@@ -8,8 +8,8 @@
 	</Link>
 	<div class="nav-items">
 		<Link to="about" class="link">About</Link>
-		<div>Projects</div>
-		<div>Contact</div>
+		<Link to="projects" class="link">Projects</Link>
+		<Link to="contact" class="link">Contact</Link>
 	</div>
 </div>
 
