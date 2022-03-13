@@ -1,7 +1,13 @@
+<script lang="ts">
+	import { Link } from 'svelte-navigator';
+</script>
+
 <div class="glass navbar">
-	<div class="nav-brand">Yudi Alfayat</div>
+	<Link to="/" class="link">
+		<div class="nav-brand">Yudi Alfayat</div>
+	</Link>
 	<div class="nav-items">
-		<div>About</div>
+		<Link to="about" class="link">About</Link>
 		<div>Projects</div>
 		<div>Contact</div>
 	</div>
@@ -24,5 +30,13 @@
 	.nav-items {
 		display: flex;
 		gap: 30px;
+	}
+
+	:global(.link) {
+		text-decoration: none;
+		color: black;
+	}
+	:global(.link:hover) {
+		color: white;
 	}
 </style>

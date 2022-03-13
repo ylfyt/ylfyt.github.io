@@ -1,13 +1,24 @@
-<script>
+<script lang="ts">
 	import Navbar from './components/Navbar.svelte';
+	import Home from './pages/Home.svelte';
+	import About from './pages/About.svelte';
+
+	import { Router, Route } from 'svelte-navigator';
 </script>
 
-<main>
-	<Navbar />
-	<div class="content glass">
-		<p>Hello</p>
-	</div>
-</main>
+<Router>
+	<main>
+		<Navbar />
+		<div class="content glass">
+			<Route path="/">
+				<Home />
+			</Route>
+			<Route path="about">
+				<About />
+			</Route>
+		</div>
+	</main>
+</Router>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -16,7 +27,7 @@
 		padding: 0;
 		box-sizing: border-box;
 		font-family: 'Poppins', sans-serif;
-		transition: all 0.3s ease;
+		transition: all 0.1s ease;
 	}
 
 	:root {
