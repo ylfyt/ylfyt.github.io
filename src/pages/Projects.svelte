@@ -3,10 +3,12 @@
 	import { projects } from '../utils/db';
 </script>
 
-<div class="projects-container">
-	{#each projects as project}
-		<ProjectCard {project} />
-	{/each}
+<div class="projects">
+	<div class="projects-container">
+		{#each projects as project}
+			<ProjectCard {project} />
+		{/each}
+	</div>
 </div>
 
 <style>

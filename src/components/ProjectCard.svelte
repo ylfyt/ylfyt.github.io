@@ -1,9 +1,11 @@
 <script lang="ts">
 	import type { IProject } from '../interfaces/IProject';
+	import { scale } from 'svelte/transition';
+
 	export let project: IProject;
 </script>
 
-<div class="project-card glass">
+<div class="project-card glass" in:scale>
 	<img src="./img/projects/{project.images[0]}" alt="" />
 	{#if project.tags.length > 0}
 		<div class="project-tags">
@@ -49,5 +51,11 @@
 		padding: 2px 4px;
 		border-radius: 5px;
 		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 620px) {
+		.project-card {
+			width: 350px;
+		}
 	}
 </style>

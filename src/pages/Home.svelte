@@ -1,8 +1,9 @@
 <script>
 	import { Link } from 'svelte-navigator';
+	import { fade } from 'svelte/transition';
 </script>
 
-<div class="home">
+<div class="home" in:fade>
 	<div class="profile">
 		<img src="./img/user.jpg" alt="" />
 	</div>
