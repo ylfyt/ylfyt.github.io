@@ -8,3 +8,12 @@
 		<ProjectCard {project} />
 	{/each}
 </div>
+
+<style>
+	.projects-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+</style>
