@@ -59,6 +59,21 @@
 		padding: 10px;
 	}
 
+	:global(.text-title) {
+		font-size: 27px;
+		font-weight: 500;
+	}
+
+	:global(.text-secondary) {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	:global(.text-regular) {
+		font-size: 15px;
+		margin-top: 10px;
+	}
+
 	main {
 		padding: 20px;
 		height: 100vh;

@@ -8,9 +8,11 @@
 	</div>
 
 	<div class="quotes">
-		<h1>Hi, I'm Yudi</h1>
-		<h3>Computer Science student</h3>
-		<p>I'm a computer science student who is very enthusiastic about technology</p>
+		<div class="text-title">Hi, I'm Yudi</div>
+		<div class="text-secondary">Computer Science student</div>
+		<p class="text-regular">
+			I'm a computer science student who is very enthusiastic about technology
+		</p>
 		<div class="contact-button">
 			<Link to="contact" class="link glass">Contact Me</Link>
 		</div>
@@ -42,21 +44,6 @@
 
 	.quotes {
 		width: 50%;
-	}
-
-	h1 {
-		font-size: 27px;
-		font-weight: 500;
-	}
-
-	h3 {
-		font-size: 20px;
-		font-weight: 500;
-	}
-
-	p {
-		font-size: 15px;
-		margin-top: 10px;
 	}
 
 	@media (max-width: 960px) {
