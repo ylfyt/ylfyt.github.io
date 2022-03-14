@@ -91,5 +91,9 @@
 		main {
 			padding: 10px;
 		}
+
+		.content {
+			align-items: stretch;
+		}
 	}
 </style>
