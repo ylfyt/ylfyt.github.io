@@ -1,7 +1,12 @@
+<script lang="ts">
+	import { scale } from 'svelte/transition';
+</script>
+
 <a
 	class="social-button glass"
 	href="https://www.linkedin.com/in/yudi-alfayat-6371781b8/"
 	target="_blank"
+	in:scale
 >
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 		><path

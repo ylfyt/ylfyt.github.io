@@ -49,8 +49,8 @@
 	};
 </script>
 
-<div class="contact" in:scale>
-	<div class="form-wrapper">
+<div class="contact">
+	<div class="form-wrapper" in:scale>
 		<form on:submit|preventDefault={submitMessage}>
 			<div class="text-title">Contact Me</div>
 			<input type="text" placeholder="Name" class="glass" bind:value={name} />

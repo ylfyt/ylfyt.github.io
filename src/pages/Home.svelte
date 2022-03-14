@@ -5,11 +5,11 @@
 	import LinkedinSocialButton from '../components/LinkedinSocialButton.svelte';
 
 	import { Link } from 'svelte-navigator';
-	import { fade } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 </script>
 
-<div class="home" in:fade>
-	<div class="profile">
+<div class="home">
+	<div class="profile" in:scale>
 		<img src="./img/user.jpg" alt="" />
 	</div>
 
