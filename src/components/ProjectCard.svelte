@@ -55,7 +55,9 @@
 
 	@media (max-width: 620px) {
 		.project-card {
-			width: 350px;
+			width: 46%;
+			min-height: 400px;
+			height: fit-content;
 		}
 	}
 </style>

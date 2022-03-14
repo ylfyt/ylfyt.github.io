@@ -86,4 +86,10 @@
 		align-items: center;
 		justify-content: center;
 	}
+
+	@media (max-width: 620px) {
+		main {
+			padding: 10px;
+		}
+	}
 </style>
