@@ -39,13 +39,6 @@
 		transition: all 0.1s ease;
 	}
 
-	:root {
-		background-image: linear-gradient(to right bottom, #ffd89b, #19547b);
-		background: -webkit-linear-gradient(to left top, #f64f59, #c471ed, #12c2e9);
-		background: linear-gradient(to left top, #f64f59, #c471ed, #12c2e9);
-		background-repeat: no-repeat;
-		height: 100%;
-	}
 	:global(.glass) {
 		background: linear-gradient(
 			to right bottom,
@@ -75,12 +68,22 @@
 	}
 
 	main {
+		background-image: linear-gradient(to right bottom, #ffd89b, #19547b);
+		background: -webkit-linear-gradient(to left top, #f64f59, #c471ed, #12c2e9);
+		background: linear-gradient(to left top, #f64f59, #c471ed, #12c2e9);
 		padding: 20px;
-		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		position: absolute;
+		width: 100%;
 	}
 
 	.content {
-		height: 94%;
 		padding: 10px 20px;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 </style>

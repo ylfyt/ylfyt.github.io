@@ -12,6 +12,9 @@
 </div>
 
 <style>
+	.projects {
+		width: 100%;
+	}
 	.projects-container {
 		display: flex;
 		justify-content: center;
