@@ -5,19 +5,21 @@
 	export let project: IProject;
 </script>
 
-<div class="project-card glass" in:scale>
-	<img src="./img/projects/{project.images[0]}" alt="" />
-	{#if project.tags.length > 0}
-		<div class="project-tags">
-			{#each project.tags as tag}
-				<div class="project-tag">{tag}</div>
-			{/each}
+<a href={project.repository} target="_blank" in:scale>
+	<div class="project-card glass">
+		<img src="./img/projects/{project.images[0]}" alt="" />
+		{#if project.tags.length > 0}
+			<div class="project-tags">
+				{#each project.tags as tag}
+					<div class="project-tag">{tag}</div>
+				{/each}
+			</div>
+		{/if}
+		<div class="description text-regular">
+			{project.description}
 		</div>
-	{/if}
-	<div class="description text-regular">
-		{project.description}
 	</div>
-</div>
+</a>
 
 <style>
 	.project-card {
@@ -51,6 +53,11 @@
 		padding: 2px 4px;
 		border-radius: 5px;
 		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
 	}
 
 	@media (max-width: 620px) {
