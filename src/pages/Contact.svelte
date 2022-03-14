@@ -4,15 +4,57 @@
 	import LinkedinSocialButton from '../components/LinkedinSocialButton.svelte';
 	import EmailSocialButton from '../components/EmailSocialButton.svelte';
 
-	const submitMessage = () => {};
+	let feedbackMessage = '';
+	let disabledButton = false;
+
+	let name = '';
+	let email = '';
+	let message = '';
+	const submitMessage = async () => {
+		feedbackMessage = 'Please wait...';
+		disabledButton = true;
+
+		const data = {
+			name,
+			email,
+			message
+		};
+
+		fetch(
+			'https://script.google.com/macros/s/AKfycbxi-YF8VdT6mexJS6-1_GBhmvqIQkFloa6vZxTZTy2UJT6JiwDuvqROLmFoDZKmK_SX5w/exec',
+			{
+				method: 'POST',
+				body: JSON.stringify(data),
+				headers: {
+					'Content-type': 'text/plain'
+				}
+			}
+		)
+			.then((result) => result.text())
+			.then((result) => {
+				if (result === 'true') {
+					feedbackMessage = 'Message sent';
+					name = '';
+					email = '';
+					message = '';
+				} else {
+					feedbackMessage = 'Message failed to send';
+				}
+				disabledButton = false;
+			})
+			.catch((error) => {
+				feedbackMessage = 'Message failed to send';
+				disabledButton = false;
+			});
+	};
 </script>
 
 <div class="contact" in:scale>
 	<div class="form-wrapper">
 		<form on:submit|preventDefault={submitMessage}>
 			<div class="text-title">Contact Me</div>
-			<input type="text" placeholder="Name" class="glass" />
-			<input type="email" placeholder="Email" class="glass" />
+			<input type="text" placeholder="Name" class="glass" bind:value={name} />
+			<input type="email" placeholder="Email" class="glass" bind:value={email} />
 			<textarea
 				name="message"
 				id=""
@@ -20,8 +62,17 @@
 				rows="10"
 				placeholder="Message"
 				class="glass"
+				bind:value={message}
 			/>
-			<button type="submit" class="glass">Submit</button>
+			<div class="submit-wrapper">
+				<button
+					type="submit"
+					class="glass"
+					disabled={name === '' || email === '' || message === '' || disabledButton}
+					>Submit</button
+				>
+				<div class="text-secondary">{feedbackMessage}</div>
+			</div>
 		</form>
 	</div>
 	<div class="social-container">
@@ -35,6 +86,11 @@
 </div>
 
 <style>
+	.submit-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
 	.contact {
 		width: 100%;
 		display: flex;
@@ -101,6 +157,10 @@
 
 	button:active {
 		box-shadow: none;
+	}
+
+	button:disabled {
+		cursor: auto;
 	}
 
 	.social-container {
