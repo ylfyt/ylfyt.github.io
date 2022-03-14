@@ -111,7 +111,7 @@
 		align-items: center;
 	}
 
-	:global(.social-wrapper) {
+	.social-wrapper {
 		margin-top: 10px;
 		display: flex;
 		gap: 40px;

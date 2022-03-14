@@ -35,8 +35,7 @@ export const projects: IProject[] = [
 		title: 'Perlu Dilindungi',
 		images: ['perlu-dilindungi/1.png'],
 		repository: 'https://github.com/ylfyt/Orientado-a-Objetos',
-		tags: ['Java', 'JavaFX'],
-		description:
-			'Application of Object Oriented Programming (OOP) concept in RPG Games. This game made with Java and JavaFX'
+		tags: ['Kotlin', 'Android'],
+		description: 'PerluDilindungi App, create with kotlin android'
 	}
 ];

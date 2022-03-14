@@ -1,4 +1,9 @@
 <script>
+	import EmailSocialButton from '../components/EmailSocialButton.svelte';
+
+	import GithubSocialButton from '../components/GithubSocialButton.svelte';
+	import LinkedinSocialButton from '../components/LinkedinSocialButton.svelte';
+
 	import { Link } from 'svelte-navigator';
 	import { fade } from 'svelte/transition';
 </script>
@@ -14,8 +19,13 @@
 		<p class="text-regular">
 			I'm a computer science student who is very enthusiastic about technology
 		</p>
-		<div class="contact-button">
-			<Link to="contact" class="link glass">Contact Me</Link>
+		<div class="contact-info">
+			<Link to="contact" id="contact-button" class="link glass">Contact Me</Link>
+			<div class="social-wrapper">
+				<GithubSocialButton />
+				<LinkedinSocialButton />
+				<EmailSocialButton />
+			</div>
 		</div>
 	</div>
 </div>
@@ -28,8 +38,24 @@
 		width: 100%;
 	}
 
-	.contact-button {
+	.contact-info {
 		margin-top: 30px;
+		display: flex;
+		gap: 40px;
+	}
+
+	.social-wrapper {
+		display: flex;
+		gap: 20px;
+	}
+
+	:global(#contact-button) {
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+		font-weight: bold;
+	}
+
+	:global(.contact-button .link) {
+		border-radius: 10px;
 	}
 
 	.profile {
