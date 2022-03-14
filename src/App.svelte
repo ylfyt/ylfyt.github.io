@@ -8,7 +8,7 @@
 	import { Router, Route } from 'svelte-navigator';
 </script>
 
-<Router>
+<Router primary={false}>
 	<main>
 		<Navbar />
 		<div class="content glass">
