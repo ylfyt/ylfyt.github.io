@@ -43,5 +43,19 @@ export const projects: IProject[] = [
 		repository: 'https://github.com/ylfyt/perlu-dilindungi-android-app',
 		tags: ['Kotlin', 'Android'],
 		description: 'PerluDilindungi App, create with kotlin android'
+	},
+	{
+		title: 'Chrome Tabs Media Controller Extension',
+		images: ['tab-controller/1.png', 'tab-controller/2.png'],
+		repository: 'https://github.com/ylfyt/chrome-tabs-media-controller-extension',
+		tags: ['Javascript', 'Chrome'],
+		description: 'Media controller for google chrome browser'
+	},
+	{
+		title: 'Led strips system',
+		images: ['led-strips/1.jpeg'],
+		repository: 'https://github.com/ylfyt/led-strips-system',
+		tags: ['C++', 'ESP8266', 'Arduino'],
+		description: 'Led strips system'
 	}
 ];
