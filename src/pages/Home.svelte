@@ -67,6 +67,7 @@
 		width: 450px;
 		height: 450px;
 		border-radius: 50%;
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.quotes {
