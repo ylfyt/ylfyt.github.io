@@ -33,8 +33,14 @@ export const projects: IProject[] = [
 	},
 	{
 		title: 'Perlu Dilindungi',
-		images: ['perlu-dilindungi/1.png'],
-		repository: 'https://github.com/ylfyt/Orientado-a-Objetos',
+		images: [
+			'perlu-dilindungi/1.png',
+			'perlu-dilindungi/2.png',
+			'perlu-dilindungi/3.png',
+			'perlu-dilindungi/4.png',
+			'perlu-dilindungi/5.png'
+		],
+		repository: 'https://github.com/ylfyt/perlu-dilindungi-android-app',
 		tags: ['Kotlin', 'Android'],
 		description: 'PerluDilindungi App, create with kotlin android'
 	}

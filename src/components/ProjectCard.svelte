@@ -3,10 +3,24 @@
 	import { scale } from 'svelte/transition';
 
 	export let project: IProject;
+
+	const PROJECT_IMGS_DIR = './img/projects/';
+
+	let idx = 0;
+	let img = PROJECT_IMGS_DIR + project.images[0];
+	const changeImg = () => {
+		img = PROJECT_IMGS_DIR + project.images[idx];
+		idx++;
+		if (idx > project.images.length - 1) {
+			idx = 0;
+		}
+		setTimeout(changeImg, 2000);
+	};
+	changeImg();
 </script>
 
 <a class="project-card glass" href={project.repository} target="_blank" in:scale>
-	<img src="./img/projects/{project.images[0]}" alt="" />
+	<img src={img} alt="" />
 	{#if project.tags.length > 0}
 		<div class="project-tags">
 			{#each project.tags as tag}
