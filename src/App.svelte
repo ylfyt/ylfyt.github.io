@@ -68,9 +68,9 @@
 	}
 
 	main {
-		background-image: linear-gradient(to right bottom, #ffd89b, #19547b);
-		background: -webkit-linear-gradient(to left top, #f64f59, #c471ed, #12c2e9);
-		background: linear-gradient(to left top, #f64f59, #c471ed, #12c2e9);
+		background-image: -webkit-linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+		background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+
 		padding: 20px;
 		display: flex;
 		flex-direction: column;
