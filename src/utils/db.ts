@@ -1,6 +1,8 @@
 import type { IProject } from 'src/interfaces/IProject';
 
-export const projects: IProject[] = [
+const PROJECT_IMG_DIR = './img/projects/';
+
+const dbProjects: IProject[] = [
 	{
 		title: 'Glassmorphism Portfolio Website',
 		images: ['glassmorphism.jpg'],
@@ -61,3 +63,10 @@ export const projects: IProject[] = [
 		description: 'Led strips system'
 	}
 ];
+
+export const projects: IProject[] = dbProjects.map((project) => {
+	for (let i = 0; i < project.images.length; i++) {
+		project.images[i] = PROJECT_IMG_DIR + project.images[i];
+	}
+	return project;
+});

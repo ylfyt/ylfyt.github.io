@@ -4,12 +4,10 @@
 
 	export let project: IProject;
 
-	const PROJECT_IMGS_DIR = './img/projects/';
-
 	let idx = 0;
-	let img = PROJECT_IMGS_DIR + project.images[0];
+	let img = project.images[0];
 	const changeImg = () => {
-		img = PROJECT_IMGS_DIR + project.images[idx];
+		img = project.images[idx];
 		idx++;
 		if (idx > project.images.length - 1) {
 			idx = 0;
