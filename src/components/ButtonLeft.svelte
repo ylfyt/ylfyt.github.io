@@ -1,0 +1,33 @@
+<script lang="ts">
+	export let clicked: svelte.JSX.MouseEventHandler<HTMLButtonElement>;
+</script>
+
+<button class="glass" on:click={clicked}>
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+		><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" /></svg
+	>
+</button>
+
+<style>
+	button {
+		border: none;
+		width: 50px;
+		height: 100px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button:active {
+		box-shadow: none;
+	}
+
+	button:hover {
+		cursor: pointer;
+	}
+
+	button:hover > svg path {
+		fill: white;
+	}
+</style>
