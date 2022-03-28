@@ -6,14 +6,24 @@ export const projects: IProject[] = [
 		images: ['glassmorphism.jpg'],
 		repository: 'https://github.com/ylfyt/Glassmorphism-Portfolio-Website',
 		tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-		description: 'Glassmorphism Portfolio Website using HTML, CSS, JavaScript, and Bootstrap'
+		description:
+			'Website portfoilio Glassmorphism. Website ini dibuat dengan menggunakan HTML, CSS, Javascript, dan Bootstrap'
+	},
+	{
+		title: 'Website Portfolio',
+		images: ['ylfyt/1.png', 'ylfyt/2.png', 'ylfyt/3.png'],
+		repository: 'https://github.com/ylfyt/ylfyt.github.io',
+		tags: ['Svelte', 'Typescript', 'Vite'],
+		description:
+			'Website portfolio yang dibuat dengan menggunakan framework Svelte dan bahasa Typescript. Pada website ini menggunakan Vite sebagai build tools-nya'
 	},
 	{
 		title: 'Path finding using A-Star algorithm.',
 		images: ['pathfinding.gif'],
 		repository: 'https://github.com/ylfyt/A-Star_Hospital-Recommendation',
 		tags: ['Java', 'JavaFX'],
-		description: 'Path finding using A-Star algorithm. This app made with Java and JavaFX'
+		description:
+			'Path finding dengan menggunakan Algoritmat A*. Aplikasi ini dibuat dengan menggunakan Java dengan Framework JavaFX'
 	},
 	{
 		title: 'Friend Recommendation System',
@@ -21,15 +31,7 @@ export const projects: IProject[] = [
 		repository: 'https://github.com/ylfyt/Tubes2_13519009',
 		tags: ['C#', '.NET'],
 		description:
-			'Friend Recommendation System using DFS and BFS algorithm. This is a desktop application made with Visual Studio C# Windows Form App (.NET Framework)'
-	},
-	{
-		title: 'RPG Games using JavaFX',
-		images: ['oop.gif'],
-		repository: 'https://github.com/ylfyt/Orientado-a-Objetos',
-		tags: ['Java', 'JavaFX'],
-		description:
-			'Application of Object Oriented Programming (OOP) concept in RPG Games. This game made with Java and JavaFX'
+			'Friend Recommendation System dengan menggunakan Algoritma DFS and BFS. Aplikasi ini merupakan aplikasi desktop yang dibuat dengan menggunakan Visual Studio C# Windows Form App (.NET Framework). Aplikasi ini digunakan untuk '
 	},
 	{
 		title: 'Perlu Dilindungi',

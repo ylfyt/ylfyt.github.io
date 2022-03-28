@@ -10,7 +10,7 @@
 
 <div class="home">
 	<div class="profile" in:scale>
-		<img src="./img/user.jpg" alt="" />
+		<img src="./img/profile.jpg" alt="" />
 	</div>
 
 	<div class="quotes">

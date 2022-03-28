@@ -20,6 +20,7 @@
 		padding-right: 30px;
 		padding-left: 30px;
 		margin-bottom: 10px;
+		align-items: center;
 	}
 
 	.nav-brand {
