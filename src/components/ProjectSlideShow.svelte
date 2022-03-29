@@ -54,6 +54,7 @@
 			</div>
 		{/if}
 		<div class="description">{project.description}</div>
+		<a class="repo project-tag" target="_blank" href={project.repository}>goto github</a>
 	</div>
 </div>
 
@@ -65,6 +66,11 @@
 		bottom: 20px;
 		right: 20px;
 	}
+
+	.repo {
+		color: orange;
+	}
+
 	.img-container {
 		position: relative;
 		min-width: 70%;
@@ -76,6 +82,7 @@
 	}
 
 	.project-detail {
+		position: relative;
 		max-height: 80vh;
 		height: 80vh;
 		width: 100%;
