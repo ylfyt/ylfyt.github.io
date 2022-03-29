@@ -147,6 +147,9 @@
 	}
 
 	@media (max-width: 620px) {
+		.project-tags {
+			margin-bottom: 5px;
+		}
 		.project-tag {
 			font-size: x-small;
 		}
@@ -163,6 +166,30 @@
 
 		.project-detail {
 			height: 20vh;
+			font-size: small;
+		}
+	}
+
+	@media (max-width: 395px) {
+		.project-tags {
+			margin-bottom: 5px;
+		}
+
+		.project-tag {
+			font-size: xx-small;
+		}
+
+		.img-container {
+			min-width: 100%;
+			min-height: 47vh;
+		}
+
+		.project-img {
+			max-height: 42vh;
+		}
+
+		.project-detail {
+			height: 30vh;
 			font-size: small;
 		}
 	}
