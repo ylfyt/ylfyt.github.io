@@ -131,6 +131,12 @@
 		.project-img {
 			max-height: 58vh;
 		}
+
+		.show-controller {
+			gap: 20px;
+			bottom: 10px;
+			right: 10px;
+		}
 	}
 
 	@media (max-width: 620px) {
@@ -145,7 +151,7 @@
 		}
 
 		.project-img {
-			max-height: 45vh;
+			max-height: 52vh;
 		}
 
 		.project-detail {
