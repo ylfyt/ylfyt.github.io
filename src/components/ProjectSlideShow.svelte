@@ -181,11 +181,11 @@
 
 		.img-container {
 			min-width: 100%;
-			min-height: 47vh;
+			min-height: 45vh;
 		}
 
 		.project-img {
-			max-height: 42vh;
+			max-height: 41vh;
 		}
 
 		.project-detail {

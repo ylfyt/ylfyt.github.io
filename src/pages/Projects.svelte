@@ -65,7 +65,7 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		transform: translate(-50%, -30px);
+		transform: translate(-50%, -20px);
 		display: flex;
 		align-items: center;
 		gap: 10px;
@@ -100,16 +100,16 @@
 		}
 
 		.controlLeft {
-			left: 0;
+			left: 10px;
 		}
 
 		.controlRight {
-			right: 0;
+			right: 10px;
 		}
 
 		.indicator-container {
 			top: 100%;
-			transform: translate(-50%, 20px);
+			transform: translate(-50%, 2px);
 		}
 
 		.indicator {

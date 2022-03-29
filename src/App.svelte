@@ -94,6 +94,7 @@
 
 		.content {
 			align-items: stretch;
+			padding: 10px;
 		}
 	}
 </style>

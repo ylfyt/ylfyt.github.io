@@ -51,4 +51,14 @@
 			padding-right: 15px;
 		}
 	}
+
+	@media (max-width: 400px) {
+		.nav-brand {
+			font-size: medium;
+		}
+
+		.nav-items {
+			font-size: small;
+		}
+	}
 </style>
