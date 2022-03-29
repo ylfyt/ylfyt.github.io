@@ -33,7 +33,7 @@
 
 	@media (max-width: 620px) {
 		button {
-			height: 50px;
+			height: 35px;
 			width: 100px;
 		}
 	}

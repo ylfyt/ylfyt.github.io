@@ -96,7 +96,7 @@
 		.slide-control {
 			position: absolute;
 			bottom: 0;
-			width: 50%;
+			width: 20%;
 		}
 
 		.controlLeft {
@@ -110,6 +110,14 @@
 		.indicator-container {
 			top: 100%;
 			transform: translate(-50%, 20px);
+		}
+
+		.indicator {
+			width: 10px;
+			height: 10px;
+			border: none;
+			border-radius: 50%;
+			padding: 0;
 		}
 	}
 </style>

@@ -88,7 +88,7 @@
 	.slide-show {
 		display: flex;
 		align-items: center;
-		gap: 20px;
+		gap: 10px;
 		width: 100%;
 	}
 
