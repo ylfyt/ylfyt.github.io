@@ -1,8 +1,13 @@
 <script lang="ts">
+	export let toggle: (
+		e?: MouseEvent & {
+			currentTarget: EventTarget & HTMLButtonElement;
+		}
+	) => void;
 	export let play: boolean;
 </script>
 
-<button class="glass" on:click={() => (play = !play)}>
+<button class="glass" on:click={(e) => toggle(e)}>
 	{#if play}
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 			><path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z" /></svg

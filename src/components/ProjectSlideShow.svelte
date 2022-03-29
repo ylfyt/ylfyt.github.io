@@ -1,13 +1,49 @@
 <script lang="ts">
 	import type { IProject } from 'src/interfaces/IProject';
-	import { slide, fly, fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
+	import PlayPauseToggle from './PlayPauseToggle.svelte';
 	export let project: IProject;
-	console.log(project);
+
+	let play = true;
+	let imgIdx = 0;
+
+	const toggle = (
+		_?: MouseEvent & {
+			currentTarget: EventTarget & HTMLButtonElement;
+		}
+	): void => {
+		play = !play;
+		if (play) {
+			changeImage();
+		}
+	};
+
+	const changeImage = () => {
+		if (play) {
+			imgIdx++;
+			if (imgIdx >= project.images.length) {
+				imgIdx = 0;
+			}
+
+			if (imgIdx < 0) {
+				imgIdx = project.images.length - 1;
+			}
+		}
+
+		if (play) {
+			setTimeout(changeImage, 1000);
+		}
+	};
+
+	setTimeout(changeImage, 1000);
 </script>
 
 <div class="slide-show" in:fade>
 	<div class="img-container glass">
-		<img class="project-img" src={project.images[0]} alt="" />
+		<img class="project-img" src={project.images[imgIdx]} alt="" />
+		<div class="show-controller">
+			<PlayPauseToggle {play} {toggle} />
+		</div>
 	</div>
 	<div class="project-detail glass">
 		{#if project.tags.length > 0}
@@ -22,7 +58,15 @@
 </div>
 
 <style>
+	.show-controller {
+		position: absolute;
+		display: flex;
+		gap: 25px;
+		bottom: 20px;
+		right: 20px;
+	}
 	.img-container {
+		position: relative;
 		min-width: 70%;
 		max-width: 70%;
 		display: flex;
