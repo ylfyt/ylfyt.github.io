@@ -30,4 +30,11 @@
 	button:hover > svg path {
 		fill: white;
 	}
+
+	@media (max-width: 620px) {
+		button {
+			height: 50px;
+			width: 100px;
+		}
+	}
 </style>

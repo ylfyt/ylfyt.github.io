@@ -53,7 +53,7 @@
 				{/each}
 			</div>
 		{/if}
-		<div>{project.description}</div>
+		<div class="description">{project.description}</div>
 	</div>
 </div>
 
@@ -97,7 +97,6 @@
 		margin-bottom: 10px;
 		display: flex;
 		flex-wrap: wrap;
-		font-size: 10px;
 		gap: 10px;
 	}
 
@@ -106,5 +105,52 @@
 		border-radius: 5px;
 		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 		font-size: small;
+	}
+
+	@media (max-width: 960px) {
+		.slide-show {
+			flex-direction: column;
+			max-height: 80vh;
+		}
+
+		.project-detail {
+			height: 15vh;
+			font-size: small;
+		}
+
+		.project-tags {
+			margin-top: 0;
+		}
+
+		.img-container {
+			min-width: 100%;
+			height: 80%;
+			min-height: 60vh;
+		}
+
+		.project-img {
+			max-height: 58vh;
+		}
+	}
+
+	@media (max-width: 620px) {
+		.project-tag {
+			font-size: x-small;
+		}
+
+		.img-container {
+			min-width: 100%;
+			height: 80%;
+			min-height: 55vh;
+		}
+
+		.project-img {
+			max-height: 45vh;
+		}
+
+		.project-detail {
+			height: 20vh;
+			font-size: small;
+		}
 	}
 </style>

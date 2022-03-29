@@ -7,8 +7,8 @@
 	let idx = 0;
 </script>
 
-<div class="projects slideShow">
-	<div class="slide-control">
+<div class="projects">
+	<div class="slide-control controlLeft">
 		<ButtonLeft
 			clicked={() => {
 				idx--;
@@ -32,7 +32,7 @@
 			{/if}
 		{/each}
 	</div>
-	<div class="slide-control">
+	<div class="slide-control controlRight">
 		<ButtonRight
 			clicked={() => {
 				idx++;
@@ -48,7 +48,7 @@
 		display: flex;
 		justify-content: center;
 	}
-	.slideShow {
+	.projects {
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -86,5 +86,30 @@
 	.showing {
 		background-color: white;
 		padding: 8px;
+	}
+
+	@media (max-width: 620px) {
+		.projects {
+			flex-direction: column;
+		}
+
+		.slide-control {
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+		}
+
+		.controlLeft {
+			left: 0;
+		}
+
+		.controlRight {
+			right: 0;
+		}
+
+		.indicator-container {
+			top: 100%;
+			transform: translate(-50%, 20px);
+		}
 	}
 </style>
