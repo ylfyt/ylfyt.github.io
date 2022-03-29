@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ProjectSlideShow from '../components/ProjectSlideShow.svelte';
-	import ProjectCard from '../components/ProjectCard.svelte';
 	import { projects } from '../utils/db';
 	import ButtonLeft from '../components/ButtonLeft.svelte';
 	import ButtonRight from '../components/ButtonRight.svelte';
@@ -18,6 +17,15 @@
 		/>
 	</div>
 	<div class="container">
+		<div class="indicator-container">
+			{#each projects as _, i}
+				{#if i === idx}
+					<button class="indicator glass showing" on:click={() => (idx = i)} />
+				{:else}
+					<button class="indicator glass" on:click={() => (idx = i)} />
+				{/if}
+			{/each}
+		</div>
 		{#each projects as project, id}
 			{#if id === idx}
 				<ProjectSlideShow {project} />
@@ -49,6 +57,34 @@
 		width: 100%;
 	}
 	.container {
+		position: relative;
 		width: 100%;
+	}
+
+	.indicator-container {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -30px);
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.indicator {
+		width: 13px;
+		height: 13px;
+		border: none;
+		border-radius: 50%;
+		padding: 0;
+	}
+
+	.indicator:hover {
+		cursor: pointer;
+	}
+
+	.showing {
+		background-color: white;
+		padding: 8px;
 	}
 </style>
