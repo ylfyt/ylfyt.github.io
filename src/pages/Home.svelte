@@ -51,7 +51,7 @@
 
 	:global(#contact-button) {
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-		font-weight: bold;
+		font-weight: 600;
 	}
 
 	:global(.contact-button .link) {
