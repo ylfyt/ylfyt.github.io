@@ -40,4 +40,15 @@
 	:global(.link:hover) {
 		color: white;
 	}
+
+	@media (max-width: 620px) {
+		.nav-items {
+			gap: 10px;
+		}
+
+		.navbar {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 </style>
