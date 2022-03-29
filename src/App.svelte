@@ -6,6 +6,17 @@
 	import Contact from './pages/Contact.svelte';
 
 	import { Router, Route } from 'svelte-navigator';
+
+	const sendRequest = async () => {
+		fetch(
+			'https://script.google.com/macros/s/AKfycbxZyAmCP4SswRzQJibcnVu8zPzAf4w3ZTwO9OkoALpqnkvlbtvCB0jtBFKKRzuoVDUmog/exec'
+		)
+			.then((result) => result.text())
+			.then((result) => console.log(result))
+			.catch((e) => console.log(e));
+	};
+
+	sendRequest();
 </script>
 
 <Router primary={false}>
