@@ -88,17 +88,6 @@ const dbProjects: IProject[] = [
 			'Path finding dengan menggunakan Algoritmat A*. Aplikasi ini dibuat dengan menggunakan Java dengan Framework JavaFX'
 	},
 	{
-		title: 'Friend Recommendation System',
-		images: {
-			count: 1,
-			dir: '/friendrecommendation'
-		},
-		repositories: [{ url: 'https://github.com/ylfyt/Tubes2_13519009' }],
-		tags: ['C#', '.NET'],
-		description:
-			'Friend Recommendation System dengan menggunakan Algoritma DFS and BFS. Aplikasi ini merupakan aplikasi desktop yang dibuat dengan menggunakan Visual Studio C# Windows Form App (.NET Framework). Aplikasi ini digunakan untuk '
-	},
-	{
 		title: 'Perlu Dilindungi',
 		images: {
 			count: 5,
