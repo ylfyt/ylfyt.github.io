@@ -158,45 +158,21 @@
 			margin-bottom: 5px;
 		}
 		.project-tag {
-			font-size: x-small;
-		}
-
-		.img-container {
-			min-width: 100%;
-			height: 80%;
-			min-height: 55vh;
-		}
-
-		.project-img {
-			max-height: 52vh;
-		}
-
-		.project-detail {
-			height: 20vh;
-			font-size: small;
-		}
-	}
-
-	@media (max-width: 395px) {
-		.project-tags {
-			margin-bottom: 5px;
-		}
-
-		.project-tag {
 			font-size: xx-small;
 		}
 
 		.img-container {
 			min-width: 100%;
-			min-height: 45vh;
+			height: 38vh;
+			min-height: 100%;
 		}
 
 		.project-img {
-			max-height: 41vh;
+			max-height: 36vh;
 		}
 
 		.project-detail {
-			height: 30vh;
+			height: 37vh;
 			font-size: small;
 		}
 	}
