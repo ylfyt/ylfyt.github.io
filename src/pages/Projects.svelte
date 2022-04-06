@@ -44,7 +44,6 @@
 
 <style>
 	.slide-control {
-		width: 10%;
 		display: flex;
 		justify-content: center;
 	}
@@ -55,6 +54,7 @@
 		justify-content: space-between;
 		min-height: 80vh;
 		width: 100%;
+		gap: 10px;
 	}
 	.container {
 		position: relative;

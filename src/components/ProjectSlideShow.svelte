@@ -128,7 +128,7 @@
 		}
 
 		.project-detail {
-			height: 15vh;
+			height: 25vh;
 			font-size: small;
 		}
 
@@ -138,12 +138,12 @@
 
 		.img-container {
 			min-width: 100%;
-			height: 80%;
-			min-height: 60vh;
+			min-height: 100%;
+			min-height: 50vh;
 		}
 
 		.project-img {
-			max-height: 58vh;
+			max-height: 48vh;
 		}
 
 		.show-controller {

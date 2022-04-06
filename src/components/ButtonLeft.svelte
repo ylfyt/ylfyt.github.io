@@ -31,6 +31,12 @@
 		fill: white;
 	}
 
+	@media (max-width: 960px) {
+		button {
+			width: 40px;
+		}
+	}
+
 	@media (max-width: 620px) {
 		button {
 			height: 35px;
