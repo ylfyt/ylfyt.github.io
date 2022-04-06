@@ -7,6 +7,8 @@
 	let play = true;
 	let imgIdx = 0;
 
+	const SLIDE_DURATION = 2000;
+
 	const toggle = (
 		_?: MouseEvent & {
 			currentTarget: EventTarget & HTMLButtonElement;
@@ -31,11 +33,11 @@
 		}
 
 		if (play) {
-			setTimeout(changeImage, 1000);
+			setTimeout(changeImage, SLIDE_DURATION);
 		}
 	};
 
-	setTimeout(changeImage, 1000);
+	setTimeout(changeImage, SLIDE_DURATION);
 </script>
 
 <div class="slide-show" in:fade>
@@ -53,7 +55,6 @@
 						>{repo.label ? repo.label : 'github'}</a
 					>
 				{/each}
-				<div />
 				<div />
 				{#each project.tags as tag}
 					<div class="project-tag">{tag}</div>

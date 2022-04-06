@@ -4,6 +4,31 @@ const PROJECT_IMG_DIR = './img/projects';
 
 const dbProjects: IProject[] = [
 	{
+		title: 'Acrylic Lamp',
+		images: {
+			count: 4,
+			dir: '/acrylic-lamp'
+		},
+		repositories: [{ url: 'https://github.com/ylfyt/Acrylic-Lamp-System' }],
+		tags: ['Arduino', 'FastLED', 'IoT'],
+		description:
+			'Acrylic lamp dengan menggunakan arduino uno sebagai microcontroller. Led yang yang digunakan adalah Addressable Led WS2812b. Untuk mengontrol led tersebut digunakan library FastLED. Acrylic lamp ini menggunakan 2 jenis controller untuk pengguna, pertama yaitu touch sensor dan yang kedua adalah secara wireless dengan menggunakan aplikasi android yang terhubung melalui bluetooth. Aplikasi android tersebut dibuat dengan menggunakan platform kodular.io. Sedangkan base yang menjadi tempat acrylicnya dibuat dengan menggunakan Fusion360, lalu dicetak dengan menggunakan 3d printer.'
+	},
+	{
+		title: 'Custom It E-Commerce',
+		images: {
+			count: 3,
+			dir: '/custom-it'
+		},
+		repositories: [
+			{ label: 'server', url: 'https://github.com/ylfyt/custom-it-server' },
+			{ label: 'frontend', url: 'https://github.com/ylfyt/custom-it-frontend' }
+		],
+		tags: ['Express', 'Typescript', 'GraphQl', 'MongoDb'],
+		description:
+			'Aplikasi untuk berbelanja barang-barang yang bisa di-custom sesuai keinginan pembeli. Aplikasi ini terdiri dari server dan frontend yang dibuat dengan Typescript. Pada bagian server menggunakan GraphQL sebagai komunikasi API-nya, dan untuk database menggunakan MongoDb dan MikroOrm sebagai Object relational mapping-nya. Selain itu framework yang digunakan adalah ExpressJs.'
+	},
+	{
 		title: 'Website Portfolio',
 		images: {
 			count: 3,
