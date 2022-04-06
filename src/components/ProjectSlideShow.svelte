@@ -44,6 +44,7 @@
 	<div class="img-container glass">
 		<img class="project-img" src={project.images.dir + `${imgIdx + 1}.png`} alt="" />
 		<div class="show-controller">
+			<div class="imgs-indicator">{imgIdx + 1}/{project.images.count}</div>
 			<PlayPauseToggle {play} {toggle} />
 		</div>
 	</div>
@@ -69,9 +70,15 @@
 	.show-controller {
 		position: absolute;
 		display: flex;
+		align-items: flex-end;
 		gap: 25px;
 		bottom: 20px;
 		right: 20px;
+	}
+	.imgs-indicator {
+		margin-right: 0px;
+		font-size: small;
+		color: orange;
 	}
 
 	.repo {
