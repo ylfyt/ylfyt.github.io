@@ -48,13 +48,19 @@
 	<div class="project-detail glass">
 		{#if project.tags.length > 0}
 			<div class="project-tags">
+				{#each project.repositories as repo}
+					<a class="repo project-tag" target="_blank" href={repo.url}
+						>{repo.label ? repo.label : 'github'}</a
+					>
+				{/each}
+				<div />
+				<div />
 				{#each project.tags as tag}
 					<div class="project-tag">{tag}</div>
 				{/each}
 			</div>
 		{/if}
 		<div class="description">{project.description}</div>
-		<a class="repo project-tag" target="_blank" href={project.repository}>goto github</a>
 	</div>
 </div>
 
