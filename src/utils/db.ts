@@ -1,27 +1,36 @@
 import type { IProject } from 'src/interfaces/IProject';
 
-const PROJECT_IMG_DIR = './img/projects/';
+const PROJECT_IMG_DIR = './img/projects';
 
 const dbProjects: IProject[] = [
 	{
-		title: 'Glassmorphism Portfolio Website',
-		images: ['glassmorphism.jpg'],
-		repository: 'https://github.com/ylfyt/Glassmorphism-Portfolio-Website',
-		tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-		description:
-			'Website portfoilio Glassmorphism. Website ini dibuat dengan menggunakan HTML, CSS, Javascript, dan Bootstrap'
-	},
-	{
 		title: 'Website Portfolio',
-		images: ['ylfyt/1.png', 'ylfyt/2.png', 'ylfyt/3.png'],
+		images: {
+			count: 3,
+			dir: '/ylfyt'
+		},
 		repository: 'https://github.com/ylfyt/ylfyt.github.io',
 		tags: ['Svelte', 'Typescript', 'Vite'],
 		description:
 			'Website portfolio yang dibuat dengan menggunakan framework Svelte dan bahasa Typescript. Pada website ini menggunakan Vite sebagai build tools-nya'
 	},
 	{
+		title: 'Glassmorphism Portfolio Website',
+		images: {
+			count: 1,
+			dir: '/glassmorphism'
+		},
+		repository: 'https://github.com/ylfyt/Glassmorphism-Portfolio-Website',
+		tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+		description:
+			'Website portfoilio Glassmorphism. Website ini dibuat dengan menggunakan HTML, CSS, Javascript, dan Bootstrap'
+	},
+	{
 		title: 'Path finding using A-Star algorithm.',
-		images: ['pathfinding.gif'],
+		images: {
+			count: 1,
+			dir: '/pathfinding'
+		},
 		repository: 'https://github.com/ylfyt/A-Star_Hospital-Recommendation',
 		tags: ['Java', 'JavaFX'],
 		description:
@@ -29,7 +38,10 @@ const dbProjects: IProject[] = [
 	},
 	{
 		title: 'Friend Recommendation System',
-		images: ['friendrecommendation.gif'],
+		images: {
+			count: 1,
+			dir: '/friendrecommendation'
+		},
 		repository: 'https://github.com/ylfyt/Tubes2_13519009',
 		tags: ['C#', '.NET'],
 		description:
@@ -37,27 +49,30 @@ const dbProjects: IProject[] = [
 	},
 	{
 		title: 'Perlu Dilindungi',
-		images: [
-			'perlu-dilindungi/1.png',
-			'perlu-dilindungi/2.png',
-			'perlu-dilindungi/3.png',
-			'perlu-dilindungi/4.png',
-			'perlu-dilindungi/5.png'
-		],
+		images: {
+			count: 5,
+			dir: '/perlu-dilindungi'
+		},
 		repository: 'https://github.com/ylfyt/perlu-dilindungi-android-app',
 		tags: ['Kotlin', 'Android'],
 		description: 'PerluDilindungi App, create with kotlin android'
 	},
 	{
 		title: 'Chrome Tabs Media Controller Extension',
-		images: ['tab-controller/1.png', 'tab-controller/2.png'],
+		images: {
+			count: 2,
+			dir: '/tab-controller'
+		},
 		repository: 'https://github.com/ylfyt/chrome-tabs-media-controller-extension',
 		tags: ['Javascript', 'Chrome'],
 		description: 'Media controller for google chrome browser'
 	},
 	{
 		title: 'Led strips system',
-		images: ['led-strips/1.jpeg'],
+		images: {
+			count: 1,
+			dir: '/led-strips'
+		},
 		repository: 'https://github.com/ylfyt/led-strips-system',
 		tags: ['C++', 'ESP8266', 'Arduino'],
 		description: 'Led strips system'
@@ -65,8 +80,6 @@ const dbProjects: IProject[] = [
 ];
 
 export const projects: IProject[] = dbProjects.map((project) => {
-	for (let i = 0; i < project.images.length; i++) {
-		project.images[i] = PROJECT_IMG_DIR + project.images[i];
-	}
+	project.images.dir = PROJECT_IMG_DIR + project.images.dir + '/';
 	return project;
 });

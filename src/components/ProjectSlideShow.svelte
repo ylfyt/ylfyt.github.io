@@ -21,12 +21,12 @@
 	const changeImage = () => {
 		if (play) {
 			imgIdx++;
-			if (imgIdx >= project.images.length) {
+			if (imgIdx >= project.images.count) {
 				imgIdx = 0;
 			}
 
 			if (imgIdx < 0) {
-				imgIdx = project.images.length - 1;
+				imgIdx = project.images.count - 1;
 			}
 		}
 
@@ -40,7 +40,7 @@
 
 <div class="slide-show" in:fade>
 	<div class="img-container glass">
-		<img class="project-img" src={project.images[imgIdx]} alt="" />
+		<img class="project-img" src={project.images.dir + `${imgIdx + 1}.png`} alt="" />
 		<div class="show-controller">
 			<PlayPauseToggle {play} {toggle} />
 		</div>

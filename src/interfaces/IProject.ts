@@ -1,6 +1,9 @@
 export interface IProject {
 	title: string;
-	images: string[];
+	images: {
+		count: number;
+		dir: string;
+	};
 	repository: string;
 	tags: string[];
 	description: string;

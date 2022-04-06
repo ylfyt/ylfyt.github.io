@@ -15,7 +15,7 @@
 			.catch(() => {});
 	};
 
-	sendRequest();
+	// sendRequest();
 </script>
 
 <Router primary={false}>
