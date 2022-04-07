@@ -3,6 +3,7 @@
 	import { projects } from '../utils/db';
 	import ButtonLeft from '../components/ButtonLeft.svelte';
 	import ButtonRight from '../components/ButtonRight.svelte';
+	import ProjectListModal from '../components/ProjectListModal.svelte';
 
 	let idx = 0;
 </script>
@@ -17,6 +18,9 @@
 		/>
 	</div>
 	<div class="container">
+		<div class="modal-container">
+			<ProjectListModal {projects} />
+		</div>
 		<div class="indicator-container">
 			{#each projects as _, i}
 				{#if i === idx}
@@ -59,6 +63,15 @@
 	.container {
 		position: relative;
 		width: 100%;
+	}
+
+	.modal-container {
+		position: absolute;
+		left: 50%;
+		bottom: 10px;
+		transform: translateX(-50%);
+		z-index: 10;
+		width: 70%;
 	}
 
 	.indicator-container {
@@ -118,6 +131,10 @@
 			border: none;
 			border-radius: 50%;
 			padding: 0;
+		}
+
+		.modal-container {
+			width: 90%;
 		}
 	}
 </style>
