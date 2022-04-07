@@ -31,7 +31,7 @@ const dbProjects: IProject[] = [
 	{
 		title: 'Acrylic Lamp',
 		images: {
-			count: 4,
+			count: 5,
 			dir: '/acrylic-lamp'
 		},
 		repositories: [{ url: 'https://github.com/ylfyt/Acrylic-Lamp-System' }],
@@ -51,7 +51,7 @@ const dbProjects: IProject[] = [
 			'Mood lamp ini dibuat dengan menggunakan arduino uno sebagai microcontrollernya. Led yang digunakan adalah Addressable Led ws2812b dengan library untuk animasinya menggunakan FastLED. Animasi pada moodlamp ini merupakan modifikasi dari animasi berikut. Modifikasi yang dilakukan adalah mengganti penggunaan delay dengan millis. Hal ini bertujuan untuk mengatasi masalah ketika perlunya membaca nilai komunikasi serial, karena lampu ini dilengkapi dengan sensor bluetooth yang dapat terhubung ke android dengan menggunakan aplikasi yang dibuat dengan kodular.io.'
 	},
 	{
-		title: 'Custom It E-Commerce',
+		title: 'GraphQL API (e-Commerce)',
 		images: {
 			count: 3,
 			dir: '/custom-it'
@@ -60,9 +60,20 @@ const dbProjects: IProject[] = [
 			{ label: 'server', url: 'https://github.com/ylfyt/custom-it-server' },
 			{ label: 'frontend', url: 'https://github.com/ylfyt/custom-it-frontend' }
 		],
-		tags: ['Express', 'Typescript', 'GraphQl', 'MongoDb'],
+		tags: ['Express', 'Typescript', 'GraphQl', 'MongoDb', 'React'],
 		description:
-			'Aplikasi untuk berbelanja barang-barang yang bisa di-custom sesuai keinginan pembeli. Aplikasi ini terdiri dari server dan frontend yang dibuat dengan Typescript. Pada bagian server menggunakan GraphQL sebagai komunikasi API-nya, dan untuk database menggunakan MongoDb dan MikroOrm sebagai Object relational mapping-nya. Selain itu framework yang digunakan adalah ExpressJs.'
+			'GraphQL API (e-commerce). API untuk aplikasi e-commerce dengan menggunakan GraphQL. API Server dibuat dengan menggunakan bahasa Typescript dan framework ExpressJs. Beberapa module yang digunakan adalah Type-Graphql, Apollo-Server, MikroORM dan MongoDb sebagai databasenya. Selain itu Aplikasi ini juga menyediakan frontend app yang dibuat dengan menggunakan ReactJs. '
+	},
+	{
+		title: 'Customyx',
+		images: {
+			count: 4,
+			dir: '/customyx'
+		},
+		repositories: [{ url: 'https://github.com/ylfyt/HMElse' }],
+		tags: ['Svelte', 'SvelteKit', 'Vite', 'TailwindCSS', 'Netlify'],
+		description:
+			'Customyx. Customyx adalah website e-commerce khusus menjual barang-barang custom atau DIY. Aplikasi ini hanya berupa frontend (belum ada server). Terdapat beberapa halaman seperti homepage, list product, detail product, dan about. Aplikasi dibuat dengan menggunakan framework Svelte, dan SvelteKit, serta untuk styling menggunakan TailwindCSS. Sedangkan build tools yang digunakan adalah Vite. Customyx sudah di-deploy ke netlify dan dapat diakses pada link https://customyx.netlify.app'
 	},
 	{
 		title: 'Glassmorphism Portfolio Website',
@@ -107,6 +118,28 @@ const dbProjects: IProject[] = [
 		tags: ['Chrome', 'Extension', 'Javascript'],
 		description:
 			'Chrome Tabs Media Controller Extension. Media controller untuk browser chrome dan edge. Extension ini dibuat dengan menggunakan javascript dengan manifest versi 2. Fitur yang dimiliki adalah mute/unmute tab’s audio dan play/pause youtube tabs.'
+	},
+	{
+		title: 'Virus Game',
+		tags: ['VirusGame', 'Survival', 'Unity', 'C#'],
+		images: {
+			count: 4,
+			dir: '/virus-game'
+		},
+		repositories: [{ url: 'https://github.com/ylfyt/virus-game' }],
+		description:
+			'Virus Game. Game bertemakan virus. Pemain akan berada di tengah layar dan bertahan melawan serangan pada virus. Player dapat menembak virus dengan menekan left mouse atau spacebar. Game mode yang tersedia adalah endless dan wave mode. Selain itu tersedia power up system (not implemented yet), supaya player dapat terus bertahan melawan banyaknya virus. Game ini dibuat dengan menggunakan game engine unity 3d.'
+	},
+	{
+		title: 'Color Switch Clone',
+		tags: ['ColorSwitch', 'Unity', 'C#'],
+		images: {
+			count: 3,
+			dir: '/color-switch-clone'
+		},
+		repositories: [{ url: 'https://github.com/ylfyt/color-switch-clone' }],
+		description:
+			'Color Switch Clone. Kloning atau membuat ulang game color switch. Game ini dibuat dengan menggunakan Game Engine Unity 3d.'
 	}
 ];
 

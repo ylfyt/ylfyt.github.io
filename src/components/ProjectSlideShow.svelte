@@ -53,7 +53,7 @@
 			<div class="project-tags">
 				{#each project.repositories as repo}
 					<a class="repo project-tag" target="_blank" href={repo.url}
-						>{repo.label ? repo.label : 'github'}</a
+						>{repo.label ? repo.label : 'code'}</a
 					>
 				{/each}
 				<div />
