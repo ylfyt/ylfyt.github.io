@@ -2,12 +2,17 @@
 	import type { IProject } from 'src/interfaces/IProject';
 
 	export let projects: IProject[];
-	console.log(projects);
+	export let changeIdx: (val: number) => void;
 </script>
 
 <div class="modal glass">
-	{#each projects as project}
-		<div class="project glass">
+	{#each projects as project, idx}
+		<div
+			class="project glass"
+			on:click={() => {
+				changeIdx(idx);
+			}}
+		>
 			<div class="image">
 				<img src={project.images.dir + '1.png'} alt="pic" />
 			</div>

@@ -6,6 +6,16 @@
 	import ProjectListModal from '../components/ProjectListModal.svelte';
 
 	let idx = 0;
+	let showModal = true;
+
+	const changeIdx = (val: number): void => {
+		idx = val;
+		toggleModal();
+	};
+
+	const toggleModal = () => {
+		showModal = !showModal;
+	};
 </script>
 
 <div class="projects">
@@ -18,9 +28,11 @@
 		/>
 	</div>
 	<div class="container">
-		<div class="modal-container">
-			<ProjectListModal {projects} />
-		</div>
+		{#if showModal}
+			<div class="modal-container">
+				<ProjectListModal {projects} {changeIdx} />
+			</div>
+		{/if}
 		<div class="indicator-container">
 			{#each projects as _, i}
 				{#if i === idx}
