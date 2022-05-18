@@ -4,7 +4,7 @@
 
 <div class="glass navbar">
 	<Link to="/" class="link">
-		<div class="nav-brand">Yudi Alfayat</div>
+		<div class="nav-brand">Yudi</div>
 	</Link>
 	<div class="nav-items">
 		<Link to="about" class="link">About</Link>
