@@ -61,15 +61,6 @@
 		width: 100%;
 	}
 
-	.modal-container {
-		position: absolute;
-		left: 50%;
-		bottom: 10px;
-		transform: translateX(-50%);
-		z-index: 10;
-		width: 70%;
-	}
-
 	.indicator-container {
 		position: absolute;
 		top: 0;
@@ -127,10 +118,6 @@
 			border: none;
 			border-radius: 50%;
 			padding: 0;
-		}
-
-		.modal-container {
-			width: 90%;
 		}
 	}
 </style>
