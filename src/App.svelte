@@ -9,7 +9,7 @@
 
 	const sendRequest = async () => {
 		fetch(
-			'https://script.google.com/macros/s/AKfycby0vbt5JBu43kwb-CN3gmciJmXQkSGNtrvdUS0bY_7VrjpNjQWdz6Vh9ZJO9qkVCqERjg/exec'
+			'https://script.google.com/macros/s/AKfycbwlQLi0D0qXHgKnX35BfKkPuhkNe25Ww0pl74Bb5ImsxYK4wRn6GYkZotkz3nkxzpBkRQ/exec'
 		)
 			.then(() => {})
 			.catch(() => {});
