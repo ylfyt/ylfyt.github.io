@@ -8,7 +8,10 @@ function App() {
 	const { isDark } = useRootContext();
 
 	useEffect(() => {
-		console.log(import.meta.env.BASE_URL);
+		if (import.meta.env.DEV) return;
+		fetch('https://script.google.com/macros/s/AKfycbwlQLi0D0qXHgKnX35BfKkPuhkNe25Ww0pl74Bb5ImsxYK4wRn6GYkZotkz3nkxzpBkRQ/exec')
+			.then(() => {})
+			.catch(() => {});
 	}, []);
 
 	return (
