@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { BiLeftArrowAlt } from 'react-icons/bi';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import ImageSlideShow from '../../components/ImageSlideshow';
 import { IProject } from '../../interfaces/IProject';
 import { projects } from '../../utils/db';
 
@@ -30,9 +31,7 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 					Back to Projects
 				</NavLink>
 			</div>
-			<div className="neu-in flex px-4 py-3 rounded-xl justify-center">
-				<img className="rounded-xl max-h-[600px]" src={`${project?.images.dir}/1.png`} alt="" />
-			</div>
+			<ImageSlideShow images={project.images} />
 			<div className="neu-in rounded-xl px-4 py-3">
 				<span className="text-2xl">{project?.title}</span>
 				<div className="mt-2 flex gap-2 text-color0 font-semibold text-[12px] flex-wrap">

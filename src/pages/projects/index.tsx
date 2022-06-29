@@ -5,8 +5,6 @@ import { projects } from '../../utils/db';
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = () => {
-	console.log(projects);
-
 	return (
 		<div className="pt-4 pb-32 flex flex-col gap-4">
 			<div className="flex justify-start sm:hidden">
