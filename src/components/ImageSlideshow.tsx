@@ -11,26 +11,24 @@ interface ImageSlideShowProps {
 
 const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
 	const [idx, setIdx] = useState(1);
-	const [prev, setPrev] = useState(1);
+	const [direction, setDirection] = useState('');
 
 	const slide = (isNext: boolean) => {
+		setDirection(isNext ? 'animate-slideFromLeft' : 'animate-slideFromRight');
 		let next = isNext ? idx + 1 : idx - 1;
 		if (next > images.count) next = 1;
 		if (next < 1) next = images.count;
-		setIdx((p) => {
-			setPrev(p);
-			return next;
-		});
+		setIdx(next);
 	};
 
 	const ids = [...Array(images.count).keys()].map((i) => i + 1);
 
 	return (
-		<div className="neu-in flex px-4 py-3 rounded-xl justify-center relative">
-			<div className="flex justify-center h-[450px] relative w-full overflow-hidden">
+		<div className="neu-in flex px-4 py-2 rounded-xl justify-center relative overflow-hidden">
+			<div className="flex justify-center w-full">
 				{ids.map((id, i) => {
 					return (
-						<div key={i} className={`${id !== idx ? 'left-0 -translate-x-full' : ''} transition-transform duration-700 ease-in-out absolute h-full flex items-center justify-center`}>
+						<div key={i} className={`${id !== idx ? 'hidden' : direction} aspect-video w-full h-full flex items-center justify-center`}>
 							<img className="rounded-xl max-h-full" src={`${images.dir}/${id}.png`} alt="" />
 						</div>
 					);

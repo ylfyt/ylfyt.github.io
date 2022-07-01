@@ -14,6 +14,28 @@ module.exports = {
 				dark: '#111827',
 				color0: '#8b5cf6',
 			},
+			keyframes: {
+				fromLeft: {
+					'0%': {
+						transform: 'translateX(-100%)',
+					},
+					'100%': {
+						transform: 'translateX(0)',
+					},
+				},
+				fromRight: {
+					'0%': {
+						transform: 'translateX(100%)',
+					},
+					'100%': {
+						transform: 'translateX(0)',
+					},
+				},
+			},
+			animation: {
+				slideFromLeft: 'fromLeft 0.4s',
+				slideFromRight: 'fromRight 0.4s',
+			},
 			boxShadow: {
 				light: `2px 2px 5px ${lightShadowColor}`,
 				dark: `2px 2px 5px ${darkShadowColor}`,
