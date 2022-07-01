@@ -34,16 +34,16 @@ const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
 					);
 				})}
 			</div>
-			<div className="absolute opacity-60 bottom-6 flex gap-4">
+			<div className="absolute opacity-60 bottom-4 sm:bottom-6 flex gap-3 sm:gap-4">
 				{ids.map((id, i) => {
-					return <div key={i} onClick={() => setIdx(id)} className={`${id === idx ? 'bg-color0' : 'bg-gray-400 hover:cursor-pointer'} hover:scale-125 h-1 w-[50px] rounded-lg`}></div>;
+					return <div key={i} onClick={() => setIdx(id)} className={`${id === idx ? 'bg-color0' : 'bg-gray-400 hover:cursor-pointer'} hover:scale-125 h-1 w-[20px] sm:w-[50px] rounded-lg`}></div>;
 				})}
 			</div>
-			<div className="absolute flex justify-between w-full px-6 top-1/2 -translate-y-1/2">
-				<Button onClick={() => slide(false)} className="text-4xl bg-gray-400 opacity-10 hover:opacity-50 px-2 py-6 rounded-l-2xl rounded-r-md hover:text-color0">
+			<div className="absolute flex justify-between w-full sm:px-6 px-2 top-3/4 sm:top-1/2 -translate-y-1/2">
+				<Button onClick={() => slide(false)} className="sm:text-4xl px-1 bg-gray-400 opacity-30 sm:opacity-10 hover:opacity-60 sm:px-2 sm:py-6 rounded-l-3xl rounded-r-md hover:text-color0">
 					<FaChevronLeft className="opacity-100" />
 				</Button>
-				<Button onClick={() => slide(true)} className="text-4xl bg-gray-400 opacity-10 hover:opacity-50 px-2 py-6 rounded-r-2xl rounded-l-md hover:text-color0">
+				<Button onClick={() => slide(true)} className="sm:text-4xl bg-gray-400 opacity-30 sm:opacity-10 hover:opacity-60 px-1 py-4 sm:px-2 sm:py-6 rounded-r-2xl rounded-l-md hover:text-color0">
 					<FaChevronRight className="opacity-100" />
 				</Button>
 			</div>
