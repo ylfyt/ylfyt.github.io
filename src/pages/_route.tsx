@@ -10,10 +10,10 @@ import ProjectDetail from './projects/[id]';
 function MainLayout() {
 	return (
 		<div>
-			<div className="hidden sticky top-0 sm:block">
+			<div className="hidden sticky top-0 sm:block z-50">
 				<MainNavbar />
 			</div>
-			<div className="block sm:hidden">
+			<div className="block sm:hidden z-50">
 				<MobileNavbar />
 			</div>
 			<div className="flex justify-center">
