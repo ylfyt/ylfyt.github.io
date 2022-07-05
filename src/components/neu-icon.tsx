@@ -6,7 +6,7 @@ interface NeuIconProps {
 }
 
 const NeuIcon: FC<NeuIconProps> = ({ icon, className }) => {
-	return <div className={`neu-out text-lg flex w-fit items-center p-2 justify-center rounded-full ${className}`}>{icon}</div>;
+	return <div className={`neu-out text-lg flex w-fit items-center p-2 justify-center rounded-full text-color0 ${className}`}>{icon}</div>;
 };
 
 export default NeuIcon;

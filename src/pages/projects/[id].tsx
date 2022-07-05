@@ -45,7 +45,7 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 				</div>
 			</div>
 			<div className="neu-in px-4 py-3 rounded-xl">
-				<span>{project?.description}</span>
+				<span className="whitespace-pre-wrap">{project?.description}</span>
 			</div>
 		</div>
 	);

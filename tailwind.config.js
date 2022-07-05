@@ -12,7 +12,7 @@ module.exports = {
 			colors: {
 				light: '#EBECF0',
 				dark: '#111827',
-				color0: '#8b5cf6',
+				color0: '#00ADB5',
 			},
 			keyframes: {
 				fromLeft: {

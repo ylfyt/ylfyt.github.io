@@ -81,8 +81,7 @@ const dbProjects: IProject[] = [
 			dir: '/virus-game',
 		},
 		repositories: [{ url: 'https://github.com/ylfyt/virus-game' }],
-		description:
-			'Virus Game. Game bertemakan virus. Pemain akan berada di tengah layar dan bertahan melawan serangan pada virus. Player dapat menembak virus dengan menekan left mouse atau spacebar. Game mode yang tersedia adalah endless dan wave mode. Selain itu tersedia power up system (not implemented yet), supaya player dapat terus bertahan melawan banyaknya virus. Game ini dibuat dengan menggunakan game engine unity 3d.',
+		description: `Virus Game. Game bertemakan virus. Pemain akan berada di tengah layar dan bertahan melawan serangan pada virus. Player dapat menembak virus dengan menekan left mouse atau spacebar. Game mode yang tersedia adalah endless dan wave mode. Selain itu tersedia power up system (not implemented yet), supaya player dapat terus bertahan melawan banyaknya virus. Game ini dibuat dengan menggunakan game engine unity 3d. Thanks to CR for the assets✨`,
 	},
 	{
 		title: 'Glassmorphism Portfolio Website',
