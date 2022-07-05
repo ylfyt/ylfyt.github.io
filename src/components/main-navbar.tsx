@@ -8,7 +8,7 @@ const MainNavbar = () => {
 	const { toggleDarkMode, isDark } = useRootContext();
 
 	return (
-		<nav className="sticky top-0 opacity-90 hover:opacity-100 bg-light dark:bg-dark shadow-md min-h-[60px] flex justify-center">
+		<nav className="sticky top-0 opacity-90 hover:opacity-100 bg-light dark:bg-dark shadow-md min-h-[60px] flex justify-center z-40">
 			<div className="flex items-center px-12 justify-between w-[1024px]">
 				<Link to="/" className="text-2xl font-semibold text-color0">
 					Yudi

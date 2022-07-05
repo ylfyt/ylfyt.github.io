@@ -61,7 +61,7 @@ const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
 						</button>
 						<img className="max-h-[75vh] opacity-100 sm:max-w-[90vw] lg::max-w-[60vw]" src={`${images.dir}/${idx}.png`} alt="" />
 					</div>
-					<div className="fixed bg-gray-500 h-screen w-full z-20 opacity-80"></div>
+					<div className="fixed bg-gray-500 h-screen w-full z-auto opacity-80"></div>
 				</div>
 			)}
 		</div>

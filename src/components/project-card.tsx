@@ -9,9 +9,11 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project, idx }) => {
 	return (
-		<NavLink to={`/projects/${idx}`} className="neu-out hover:neu-out-long  transition-shadow py-3 px-4 rounded-lg flex flex-col gap-3 cursor-pointer">
-			<div className="flex justify-center aspect-video h-full w-full">
-				<img className="max-h-full" src={`${project.images.dir}/1.png`} alt="" />
+		<NavLink to={`/projects/${idx}`} className="animate-scaleUp neu-out hover:neu-out-long transition-shadow py-3 px-4 rounded-lg flex flex-col gap-3 cursor-pointer">
+			<div className="flex justify-center">
+				<div className="aspect-video flex items-center justify-center w-full">
+					<img className="max-h-full" src={`${project.images.dir}/1.png`} alt="" />
+				</div>
 			</div>
 			<div className="flex flex-col py-2 rounded-xl">
 				<span className="font-semibold">{project.title}</span>

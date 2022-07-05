@@ -8,7 +8,7 @@ const MobileNavbar = () => {
 	const { toggleDarkMode, isDark } = useRootContext();
 
 	return (
-		<nav className="fixed bottom-0 bg-light dark:bg-dark shadow-[-2px_-2px_10px_rgba(0,0,0,0.2)] w-full py-2 flex items-center">
+		<nav className="fixed bottom-0 bg-light dark:bg-dark shadow-[-2px_-2px_10px_rgba(0,0,0,0.2)] w-full py-2 flex items-center z-30">
 			<div className="flex flex-1 items-center justify-evenly">
 				<NavItemIcon icon={<FaHome />} label="Home" to="/" />
 				<NavItemIcon icon={<FaClipboardList />} label="Projects" to="/projects" />

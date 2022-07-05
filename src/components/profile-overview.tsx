@@ -14,7 +14,7 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 	return (
 		<div className="flex flex-col md:flex-row-reverse gap-4 items-start justify-evenly">
 			<div className="w-full sm:w-1/3 flex items-center justify-center">
-				<div className="neu-out w-fit rounded-full p-4">
+				<div className="neu-out w-fit  animate-scaleUp rounded-full p-4">
 					<img className="w-[250px] aspect-square rounded-full" src={`${import.meta.env.BASE_URL}profile.jpg`} alt="profile" />
 				</div>
 			</div>
@@ -39,20 +39,20 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 						</a>
 					</div>
 					<div className="flex gap-4">
-						<LinkIcon url="https://github.com/ylfyt" icon={<FaGithub size={24} />} />
-						<LinkIcon url="https://www.linkedin.com/in/yudi-alfayat-6371781b8/" icon={<FaLinkedin size={24} />} />
-						<LinkIcon url="mailto:yalfayat@gmail.com" icon={<HiOutlineMail size={24} />} />
+						<LinkIcon className="animate-scaleUp" url="https://github.com/ylfyt" icon={<FaGithub size={24} />} />
+						<LinkIcon className="animate-scaleUp" url="https://www.linkedin.com/in/yudi-alfayat-6371781b8/" icon={<FaLinkedin size={24} />} />
+						<LinkIcon className="animate-scaleUp" url="mailto:yalfayat@gmail.com" icon={<HiOutlineMail size={24} />} />
 					</div>
 				</div>
 				<div className="mt-4 neu-in rounded-2xl w-fit px-5 py-2">
 					<div className="text-xl mb-3 font-semibold">Current favorite technologies</div>
 					<div className="flex gap-3">
-						<NeuIcon className="text-[24px] hover:text-color0" icon={<SiDotnet />} />
-						<NeuIcon className="text-[24px] aspect-square hover:text-color0" icon={<SiTypescript />} />
-						<NeuIcon className="text-[24px] hover:text-color0" icon={<SiGraphql />} />
-						<NeuIcon className="text-[24px] hover:text-color0" icon={<SiReact />} />
-						<NeuIcon className="text-[24px] hover:text-color0" icon={<SiSvelte />} />
-						<NeuIcon className="text-[24px] hover:text-color0" icon={<SiTailwindcss />} />
+						<NeuIcon className="text-[24px] animate-scaleUp" icon={<SiDotnet />} />
+						<NeuIcon className="text-[24px] animate-scaleUp" icon={<SiTypescript />} />
+						<NeuIcon className="text-[24px] animate-scaleUp" icon={<SiGraphql />} />
+						<NeuIcon className="text-[24px] animate-scaleUp" icon={<SiReact />} />
+						<NeuIcon className="text-[24px] animate-scaleUp" icon={<SiSvelte />} />
+						<NeuIcon className="text-[24px] animate-scaleUp" icon={<SiTailwindcss />} />
 					</div>
 				</div>
 			</div>

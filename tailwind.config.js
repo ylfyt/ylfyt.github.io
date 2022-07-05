@@ -31,10 +31,19 @@ module.exports = {
 						transform: 'translateX(0)',
 					},
 				},
+				scaleUp: {
+					'0%': {
+						transform: 'scale(0.5)',
+					},
+					'100%': {
+						transform: 'scale(1)',
+					},
+				},
 			},
 			animation: {
 				slideFromLeft: 'fromLeft 0.4s',
 				slideFromRight: 'fromRight 0.4s',
+				scaleUp: 'scaleUp 0.4s',
 			},
 			boxShadow: {
 				light: `2px 2px 5px ${lightShadowColor}`,
