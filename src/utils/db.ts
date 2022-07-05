@@ -29,7 +29,7 @@ const dbProjects: IProject[] = [
 	{
 		title: 'Acrylic Lamp',
 		images: {
-			count: 5,
+			count: 6,
 			dir: '/acrylic-lamp',
 		},
 		repositories: [{ url: 'https://github.com/ylfyt/Acrylic-Lamp-System' }],
@@ -44,8 +44,8 @@ const dbProjects: IProject[] = [
 			dir: '/custom-it',
 		},
 		repositories: [
-			{ label: 'server', url: 'https://github.com/ylfyt/custom-it-server' },
-			{ label: 'frontend', url: 'https://github.com/ylfyt/custom-it-frontend' },
+			{ label: 'Server', url: 'https://github.com/ylfyt/custom-it-server' },
+			{ label: 'Frontend', url: 'https://github.com/ylfyt/custom-it-frontend' },
 		],
 		tags: ['Express', 'Typescript', 'GraphQl', 'MongoDb', 'React'],
 		description:

@@ -86,9 +86,9 @@ const Contacts: FC<ContactsProps> = () => {
 			<div className="flex flex-col items-center neu-in w-fit px-6 py-2 pb-4 gap-4 rounded-xl">
 				<div className="text-xl font-semibold text-color0 w-fit">Connect With Me</div>
 				<div className="flex gap-8">
-					<LinkIcon url="https://github.com/ylfyt" icon={<FaGithub size={30} />} />
-					<LinkIcon url="https://www.linkedin.com/in/yudi-alfayat-6371781b8/" icon={<FaLinkedin size={30} />} />
-					<LinkIcon url="mailto:yalfayat@gmail.com" icon={<HiOutlineMail size={30} />} />
+					<LinkIcon className="animate-scaleUp" url="https://github.com/ylfyt" icon={<FaGithub size={30} />} />
+					<LinkIcon className="animate-scaleUp" url="https://www.linkedin.com/in/yudi-alfayat-6371781b8/" icon={<FaLinkedin size={30} />} />
+					<LinkIcon className="animate-scaleUp" url="mailto:yalfayat@gmail.com" icon={<HiOutlineMail size={30} />} />
 				</div>
 			</div>
 		</div>

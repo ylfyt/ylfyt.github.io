@@ -1,5 +1,6 @@
 export interface IRepository {
 	label?: string;
+	type?: 'code' | 'app';
 	url: string;
 }
 
