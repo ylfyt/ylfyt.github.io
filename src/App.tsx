@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { useRootContext } from './contexts/root';
 import MainRoute from './pages/_route';
+import { COLORS } from './utils/colors';
 
 function App() {
 	const routes = useRoutes([MainRoute]);
@@ -13,6 +14,8 @@ function App() {
 			.then(() => {})
 			.catch(() => {});
 	}, []);
+
+	document.body.style.backgroundColor = isDark ? COLORS.dark : COLORS.light;
 
 	return (
 		<div className={`${isDark ? 'dark' : ''}`}>

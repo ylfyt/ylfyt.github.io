@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { BiLeftArrowAlt } from 'react-icons/bi';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import ImageSlideShow from '../../components/ImageSlideshow';
+import ImageSlideShow from '../../components/image-slideshow';
 import { IProject } from '../../interfaces/IProject';
 import { projects } from '../../utils/db';
 
