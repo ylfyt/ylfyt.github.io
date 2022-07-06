@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom';
 import { useRootContext } from './contexts/root';
 import MainRoute from './pages/_route';
 import { COLORS } from './utils/colors';
+import { APP_SCRIPT_URL } from './utils/contants';
 
 function App() {
 	const routes = useRoutes([MainRoute]);
@@ -10,7 +11,7 @@ function App() {
 
 	useEffect(() => {
 		if (import.meta.env.DEV) return;
-		fetch('https://script.google.com/macros/s/AKfycbwlQLi0D0qXHgKnX35BfKkPuhkNe25Ww0pl74Bb5ImsxYK4wRn6GYkZotkz3nkxzpBkRQ/exec')
+		fetch(APP_SCRIPT_URL)
 			.then(() => {})
 			.catch(() => {});
 	}, []);

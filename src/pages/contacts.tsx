@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import Button from '../components/button';
 import LinkIcon from '../components/LinkIcon';
+import { APP_SCRIPT_URL } from '../utils/contants';
 interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
@@ -21,23 +22,23 @@ const Contacts: FC<ContactsProps> = () => {
 		};
 		setLoading(true);
 		setFeedback('');
-		fetch('https://script.google.com/macros/s/AKfycbxi-YF8VdT6mexJS6-1_GBhmvqIQkFloa6vZxTZTy2UJT6JiwDuvqROLmFoDZKmK_SX5w/exec', {
+		fetch(APP_SCRIPT_URL, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers: {
 				'Content-type': 'text/plain',
 			},
 		})
-			.then((result) => result.text())
+			.then((result) => result.json())
 			.then((result) => {
-				if (result === 'true') {
-					setEmail('');
-					setName('');
-					setMessage('');
-					setFeedback('Message sent');
-				} else {
+				if (!result?.success) {
 					setFeedback('Failed to send');
+					return;
 				}
+				setEmail('');
+				setName('');
+				setMessage('');
+				setFeedback('Message sent');
 			})
 			.catch(() => {
 				setFeedback('Failed to send');
