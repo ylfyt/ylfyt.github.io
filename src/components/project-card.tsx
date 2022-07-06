@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { IoRocketSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import { IProject } from '../interfaces/IProject';
+import { IProject } from '../interfaces/project';
 
 interface ProjectCardProps {
 	project: IProject;

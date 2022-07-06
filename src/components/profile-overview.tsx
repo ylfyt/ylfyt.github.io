@@ -6,7 +6,7 @@ import NeuIcon from '../components/neu-icon';
 import { BiPaperPlane } from 'react-icons/bi';
 import { SiDotnet, SiGraphql, SiReact, SiSvelte, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { BsFillFileEarmarkPersonFill } from 'react-icons/bs';
-import LinkIcon from './LinkIcon';
+import LinkIcon from './link-icon';
 
 interface ProfileOverviewProps {}
 

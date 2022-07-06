@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IProject } from '../interfaces/IProject';
+import { IProject } from '../interfaces/project';
 import NavItem from './nav-item';
 import ProjectCard from './project-card';
 

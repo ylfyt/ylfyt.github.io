@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import Button from '../components/button';
-import LinkIcon from '../components/LinkIcon';
+import LinkIcon from '../components/link-icon';
 import { APP_SCRIPT_URL } from '../utils/contants';
 interface ContactsProps {}
 

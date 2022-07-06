@@ -1,4 +1,4 @@
-import { IProject } from '../interfaces/IProject';
+import { IProject } from '../interfaces/project';
 
 const dbProjects: IProject[] = [
 	{
