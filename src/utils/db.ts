@@ -2,6 +2,28 @@ import { IProject } from '../interfaces/project';
 
 const dbProjects: IProject[] = [
 	{
+		title: 'Easy Paste',
+		images: {
+			count: 2,
+			dir: '/easy-paste',
+		},
+		repositories: [
+			{ url: 'https://easy-paste.web.app', label: 'App', type: 'app' },
+			{
+				url: 'https://github.com/ylfyt/fast-paste',
+				label: 'Code',
+				type: 'code',
+			},
+		],
+		tags: ['Firebase', 'Svelte', 'Typescript', 'Vite'],
+		description: `Feature: 
+    - Copy & Paste text
+    - Upload file (max 5MB)
+    - Login with google for private paste room
+
+Made with Svelte + Vite + TS + Firebase`,
+	},
+	{
 		title: 'Website Portfolio',
 		images: {
 			count: 3,
@@ -25,17 +47,6 @@ const dbProjects: IProject[] = [
 		tags: ['C++', 'Typescript', 'React', 'ESP8266', 'Arduino', 'AsyncWebServer'],
 		description:
 			'Led strips lights. Led strip yang dibuat dengan menggunakan NodeMCU (ESP8266) sebagai microcontroller dan komunikasinya. Sistem led strip ini menyediakan web server yang dibuat dengan menggunakan library AsyncWebServer, sehingga dapat dikontrol dengan menggunakan protokol http. Led strip ini dikontrol dengan sebuah web app yang dibuat dengan menggunakan framework ReactJs dan bahasa Typescript.',
-	},
-	{
-		title: 'Acrylic Lamp',
-		images: {
-			count: 6,
-			dir: '/acrylic-lamp',
-		},
-		repositories: [{ url: 'https://github.com/ylfyt/Acrylic-Lamp-System' }],
-		tags: ['Arduino', 'Fusion360', 'FastLED', 'Bluetooth'],
-		description:
-			'Acrylic lamp dengan menggunakan arduino uno sebagai microcontroller. Led yang yang digunakan adalah Addressable Led WS2812b. Untuk mengontrol led tersebut digunakan library FastLED. Acrylic lamp ini menggunakan 2 jenis controller untuk pengguna, pertama yaitu touch sensor dan yang kedua adalah secara wireless dengan menggunakan aplikasi android yang terhubung melalui bluetooth. Aplikasi android tersebut dibuat dengan menggunakan platform kodular.io. Sedangkan base yang menjadi tempat acrylicnya dibuat dengan menggunakan Fusion360, lalu dicetak dengan menggunakan 3d printer.',
 	},
 	{
 		title: 'GraphQL API (e-Commerce)',
@@ -72,16 +83,6 @@ const dbProjects: IProject[] = [
 		tags: ['Arduino', 'FastLED', 'Bluetooth'],
 		description:
 			'Mood lamp ini dibuat dengan menggunakan arduino uno sebagai microcontrollernya. Led yang digunakan adalah Addressable Led ws2812b dengan library untuk animasinya menggunakan FastLED. Animasi pada moodlamp ini merupakan modifikasi dari animasi berikut. Modifikasi yang dilakukan adalah mengganti penggunaan delay dengan millis. Hal ini bertujuan untuk mengatasi masalah ketika perlunya membaca nilai komunikasi serial, karena lampu ini dilengkapi dengan sensor bluetooth yang dapat terhubung ke android dengan menggunakan aplikasi yang dibuat dengan kodular.io.',
-	},
-	{
-		title: 'Virus Game',
-		tags: ['VirusGame', 'Survival', 'Unity', 'C#'],
-		images: {
-			count: 4,
-			dir: '/virus-game',
-		},
-		repositories: [{ url: 'https://github.com/ylfyt/virus-game' }],
-		description: `Virus Game. Game bertemakan virus. Pemain akan berada di tengah layar dan bertahan melawan serangan pada virus. Player dapat menembak virus dengan menekan left mouse atau spacebar. Game mode yang tersedia adalah endless dan wave mode. Selain itu tersedia power up system (not implemented yet), supaya player dapat terus bertahan melawan banyaknya virus. Game ini dibuat dengan menggunakan game engine unity 3d. Thanks to CR for the assets✨`,
 	},
 	{
 		title: 'Glassmorphism Portfolio Website',
