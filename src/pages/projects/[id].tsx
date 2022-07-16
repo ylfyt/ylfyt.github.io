@@ -4,7 +4,6 @@ import { FaGithub } from 'react-icons/fa';
 import { IoRocketSharp } from 'react-icons/io5';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import ImageSlideShow from '../../components/image-slideshow';
-import NeuIcon from '../../components/neu-icon';
 import { IProject } from '../../interfaces/project';
 import { projects } from '../../utils/db';
 

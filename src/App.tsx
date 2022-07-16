@@ -16,7 +16,9 @@ function App() {
 			.catch(() => {});
 	}, []);
 
-	document.body.style.backgroundColor = isDark ? COLORS.dark : COLORS.light;
+	useEffect(() => {
+		document.body.style.backgroundColor = isDark ? COLORS.dark : COLORS.light;
+	}, [isDark]);
 
 	return (
 		<div className={`${isDark ? 'dark' : ''}`}>
