@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project, idx }) => {
 	return (
-		<div className="group neu-out hover:neu-out-long transition-shadow py-3 px-4 rounded-lg flex flex-col gap-4">
+		<div className="group neu-out hover:neu-out-long transition-shadow py-3 px-4 rounded-lg flex flex-col gap-4 w-full">
 			<Link to={`/projects/${idx}`} className="flex flex-col gap-2">
 				<div className="flex justify-center">
 					<div className="aspect-video flex items-center justify-center w-full">
