@@ -20,7 +20,7 @@ const Home: FC<HomeProps> = () => {
 	return (
 		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 pb-24 flex flex-col gap-8`}>
 			<ProfileOverview />
-			<FadeUpComponent className="show-3 sm:show-2">
+			<FadeUpComponent order={2} mobileOrder={3}>
 				<LessProjects projects={projects} />
 			</FadeUpComponent>
 		</div>

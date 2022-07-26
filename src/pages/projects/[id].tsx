@@ -31,7 +31,7 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 
 	return (
 		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 pb-32 flex flex-col gap-4`}>
-			<FadeUpComponent className="show-1">
+			<FadeUpComponent order={1}>
 				<div className="flex justify-end w-full sm:justify-start">
 					<NavLink to="/projects" className="neu-out hover:text-color0 w-fit px-4 py-1 rounded-3xl flex items-center">
 						<BiLeftArrowAlt className="text-2xl" />
@@ -39,10 +39,10 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 					</NavLink>
 				</div>
 			</FadeUpComponent>
-			<FadeUpComponent className="show-1">
+			<FadeUpComponent order={1}>
 				<ImageSlideShow images={project.images} />
 			</FadeUpComponent>
-			<FadeUpComponent className="show-2">
+			<FadeUpComponent order={2}>
 				<div className="w-full flex gap-2 sm:gap-4">
 					{project.repositories.map((repo, idx) => {
 						return (
@@ -54,7 +54,7 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 					})}
 				</div>
 			</FadeUpComponent>
-			<FadeUpComponent className="show-2">
+			<FadeUpComponent order={2}>
 				<div className="w-full neu-in rounded-xl px-4 py-3">
 					<span className="text-2xl">{project?.title}</span>
 					<div className="mt-2 flex gap-2 text-color0 font-semibold text-[12px] flex-wrap">
@@ -68,7 +68,7 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 					</div>
 				</div>
 			</FadeUpComponent>
-			<FadeUpComponent className="show-3">
+			<FadeUpComponent order={3}>
 				<div className="w-full neu-in px-4 py-3 rounded-xl">
 					<span className="whitespace-pre-wrap">{project?.description}</span>
 				</div>

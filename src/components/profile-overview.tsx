@@ -8,23 +8,20 @@ import { SiDotnet, SiGraphql, SiReact, SiSvelte, SiTailwindcss, SiTypescript } f
 import { BsFillFileEarmarkPersonFill } from 'react-icons/bs';
 import LinkIcon from './link-icon';
 import FadeUpComponent from './fade-up-component';
-import { useRootContext } from '../contexts/root';
 
 interface ProfileOverviewProps {}
 
 const ProfileOverview: FC<ProfileOverviewProps> = () => {
-	const { isMobile } = useRootContext();
-
 	return (
 		<div className="w-full flex flex-col md:flex-row-reverse gap-4 items-start justify-evenly">
-			<FadeUpComponent className="show-1">
+			<FadeUpComponent order={1}>
 				<div className="w-full sm:w-1/3 md:w-2/3 flex items-center justify-center ml-auto mr-auto">
 					<div className="neu-out w-fit rounded-full p-4">
 						<img className="w-[250px] aspect-square rounded-full" src={`${import.meta.env.BASE_URL}profile.jpg`} alt="profile" />
 					</div>
 				</div>
 			</FadeUpComponent>
-			<FadeUpComponent className="show-2 sm:show-1">
+			<FadeUpComponent order={1} mobileOrder={2}>
 				<div className="flex flex-col gap-4 w-full">
 					<div className="flex flex-col justify-start neu-in px-5 py-2 gap-1 items-start rounded-2xl">
 						<span className="text-2xl font-semibold">Hi, I'm Yudi</span>
