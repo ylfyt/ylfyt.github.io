@@ -25,7 +25,7 @@ const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
 	const ids = [...Array(images.count).keys()].map((i) => i + 1);
 
 	return (
-		<div className="neu-in flex px-4 py-2 rounded-xl justify-center relative overflow-hidden">
+		<div className="neu-in flex px-4 py-2 rounded-xl justify-center relative overflow-hidden w-full">
 			<div className="flex justify-center w-full">
 				{ids.map((id, i) => {
 					return (
@@ -48,7 +48,7 @@ const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
 					<FaChevronRight className="opacity-100" />
 				</Button>
 			</div>
-			<div className="absolute text-color0 top-2 right-3 text-lg z-20">
+			<div className="absolute hidden text-color0 top-2 right-3 text-lg z-20">
 				<Button onClick={() => setFullscreen(true)} className="opacity-60 hover:opacity-100">
 					<FaSearch className="opacity-100" />
 				</Button>

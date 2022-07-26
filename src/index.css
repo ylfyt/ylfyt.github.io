@@ -54,19 +54,19 @@ html {
 		@apply ease-in-out duration-300 px-4 py-2 neu-out active:neu-in rounded-lg;
 	}
 
-	[data-fade] {
+	.use-transition {
 		@apply translate-y-10 opacity-0 transition duration-300 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100;
 	}
-	.fade-start [data-fade] {
+	.fade-start .show {
 		@apply translate-y-0 opacity-100;
 	}
-	.fade-start [data-fade='1'] {
+	.fade-start .show-1 {
 		@apply delay-150;
 	}
-	.fade-start [data-fade='2'] {
+	.fade-start .show-2 {
 		@apply delay-300;
 	}
-	.fade-start [data-fade='3'] {
+	.fade-start .show-3 {
 		@apply delay-500;
 	}
 }

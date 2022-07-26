@@ -13,7 +13,7 @@ const Projects: FC<ProjectsProps> = () => {
 
 	return (
 		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 pb-32 flex flex-col gap-4`}>
-			<FadeUpComponent order={1}>
+			<FadeUpComponent className="show-1">
 				<div className="flex justify-start w-full sm:hidden">
 					<div className="neu-out text-color0 w-fit px-4 py-1 rounded-3xl flex items-center font-semibold">Projects</div>
 				</div>
@@ -21,7 +21,13 @@ const Projects: FC<ProjectsProps> = () => {
 			<div className={`grid grid-cols-1 sm:grid-cols-2 gap-5`}>
 				{projects.map((project, idx) => {
 					return (
-						<FadeUpComponent key={idx} order={!isMobile ? (idx < 2 ? 1 : idx < 4 ? 2 : 3) : idx < 1 ? 1 : idx < 2 ? 2 : 3}>
+						<FadeUpComponent
+							key={idx}
+							className={`
+              ${idx < 1 ? 'show-1' : idx < 2 ? 'show-2' : 'show-3'}
+              sm:${idx < 2 ? 'show-1' : idx < 4 ? 'show-2' : 'show-3'}
+            `}
+						>
 							<ProjectCard idx={idx} project={project} />
 						</FadeUpComponent>
 					);
