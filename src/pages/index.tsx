@@ -1,6 +1,8 @@
 import { FC, useEffect, useState } from 'react';
+import FadeUpComponent from '../components/fade-up-component';
 import LessProjects from '../components/less-projects';
 import ProfileOverview from '../components/profile-overview';
+import useLoaded from '../hooks/use-loaded';
 import { IProject } from '../interfaces/project';
 import { projects as oldProjects } from '../utils/db';
 
@@ -14,10 +16,15 @@ const Home: FC<HomeProps> = () => {
 		setProjects(temp);
 	}, []);
 
+	const isLoaded = useLoaded();
 	return (
-		<div className="pt-4 pb-24 flex flex-col gap-8">
-			<ProfileOverview />
-			<LessProjects projects={projects} />
+		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 pb-24 flex flex-col gap-8`}>
+			<FadeUpComponent order={1}>
+				<ProfileOverview />
+			</FadeUpComponent>
+			<FadeUpComponent order={2}>
+				<LessProjects projects={projects} />
+			</FadeUpComponent>
 		</div>
 	);
 };

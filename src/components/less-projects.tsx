@@ -7,9 +7,9 @@ interface LessProjectsProps {
 	projects: IProject[];
 }
 
-const LessProjects: FC<LessProjectsProps> = ({ projects }) => {
+const LessProjects: FC<LessProjectsProps> = ({ projects, ...props }) => {
 	return (
-		<div className="neu-in px-5 py-2 pb-4 rounded-2xl flex flex-col gap-4">
+		<div {...props} className="neu-in px-5 py-2 pb-4 rounded-2xl flex flex-col gap-4">
 			<div className="text-2xl font-semibold">Favorite Projects</div>
 			<div className="grid sm:grid-cols-2 gap-4">
 				{projects.map((project, idx) => {
