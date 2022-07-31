@@ -24,6 +24,27 @@ const dbProjects: IProject[] = [
 Made with Svelte + Vite + TS + Firebase`,
 	},
 	{
+		title: 'Virus Game',
+		tags: ['VirusGame', 'Survival', 'Unity', 'C#'],
+		images: {
+			count: 4,
+			dir: '/virus-game',
+		},
+		repositories: [{ url: 'https://github.com/ylfyt/virus-game' }],
+		description: `Virus Game. Game bertemakan virus. Pemain akan berada di tengah layar dan bertahan melawan serangan pada virus. Player dapat menembak virus dengan menekan left mouse atau spacebar. Game mode yang tersedia adalah endless dan wave mode. Selain itu tersedia power up system (not implemented yet), supaya player dapat terus bertahan melawan banyaknya virus. Game ini dibuat dengan menggunakan game engine unity 3d. Thanks to CR for the assets✨`,
+	},
+	{
+		title: 'Acrylic Lamp',
+		images: {
+			count: 6,
+			dir: '/acrylic-lamp',
+		},
+		repositories: [{ url: 'https://github.com/ylfyt/Acrylic-Lamp-System' }],
+		tags: ['Arduino', 'Fusion360', 'FastLED', 'Bluetooth'],
+		description:
+			'Acrylic lamp dengan menggunakan arduino uno sebagai microcontroller. Led yang yang digunakan adalah Addressable Led WS2812b. Untuk mengontrol led tersebut digunakan library FastLED. Acrylic lamp ini menggunakan 2 jenis controller untuk pengguna, pertama yaitu touch sensor dan yang kedua adalah secara wireless dengan menggunakan aplikasi android yang terhubung melalui bluetooth. Aplikasi android tersebut dibuat dengan menggunakan platform kodular.io. Sedangkan base yang menjadi tempat acrylicnya dibuat dengan menggunakan Fusion360, lalu dicetak dengan menggunakan 3d printer.',
+	},
+	{
 		title: 'Website Portfolio',
 		images: {
 			count: 3,
