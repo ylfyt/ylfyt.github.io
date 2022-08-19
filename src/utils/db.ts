@@ -24,6 +24,42 @@ const dbProjects: IProject[] = [
 Made with Svelte + Vite + TS + Firebase`,
 	},
 	{
+		title: 'ASP.NET Auth Service',
+		images: {
+			count: 4,
+			dir: '/asp-net-auth-service',
+		},
+		description: `Auth Service using ASP.NET with Refresh and Blacklist Token Mechanism for invalidate access token when user signed out \nFeatures :
+    - Register
+    - Login
+    - Verify Access Token
+    - Refresh Token
+    - Logout
+    - Logout from All Devies
+    `,
+		repositories: [
+			{
+				url: 'https://github.com/ylfyt/auth-service',
+				type: 'code',
+			},
+		],
+		tags: ['ASP.NET', 'C#', 'EntityFramework', 'JWT', 'Postgresql'],
+	},
+	{
+		title: 'Led strips system',
+		images: {
+			count: 4,
+			dir: '/led-strips',
+		},
+		repositories: [
+			{ label: 'System', url: 'https://github.com/ylfyt/led-strips-system' },
+			{ label: 'App', url: 'https://github.com/ylfyt/led-strips-controller' },
+		],
+		tags: ['C++', 'Typescript', 'React', 'ESP8266', 'Arduino', 'AsyncWebServer'],
+		description:
+			'Led strips lights. Led strip yang dibuat dengan menggunakan NodeMCU (ESP8266) sebagai microcontroller dan komunikasinya. Sistem led strip ini menyediakan web server yang dibuat dengan menggunakan library AsyncWebServer, sehingga dapat dikontrol dengan menggunakan protokol http. Led strip ini dikontrol dengan sebuah web app yang dibuat dengan menggunakan framework ReactJs dan bahasa Typescript.',
+	},
+	{
 		title: 'Virus Game',
 		tags: ['VirusGame', 'Survival', 'Unity', 'C#'],
 		images: {
