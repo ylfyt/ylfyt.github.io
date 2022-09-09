@@ -27,9 +27,9 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 						<span className="text-2xl font-semibold">Hi, I'm Yudi</span>
 						<div className="flex items-center gap-2">
 							<NeuIcon className="text-color0" icon={<HiOutlineDesktopComputer />} />
-							<span className="text-lg font-semibold">Jr. Fullstack Developer</span>
+							<span className="text-lg font-semibold">Software Engineer</span>
 						</div>
-						<span className="text-sm">I'm currently working as computer science student and Jr. fullstack developer</span>
+						<span className="text-sm">I'm currently working as computer science student and Software Engineer</span>
 					</div>
 					<div className="flex gap-4 flex-col">
 						<div className="flex gap-4">
