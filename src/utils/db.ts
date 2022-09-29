@@ -92,20 +92,6 @@ Made with Svelte + Vite + TS + Firebase`,
 			'Website portfolio yang dibuat dengan menggunakan framework Svelte dan bahasa Typescript. Design dari website ini adalah Glass Morphism website. Build tools yang digunakan adalah Vite.',
 	},
 	{
-		title: 'Led strips system',
-		images: {
-			count: 4,
-			dir: '/led-strips',
-		},
-		repositories: [
-			{ label: 'System', url: 'https://github.com/ylfyt/led-strips-system' },
-			{ label: 'App', url: 'https://github.com/ylfyt/led-strips-controller' },
-		],
-		tags: ['C++', 'Typescript', 'React', 'ESP8266', 'Arduino', 'AsyncWebServer'],
-		description:
-			'Led strips lights. Led strip yang dibuat dengan menggunakan NodeMCU (ESP8266) sebagai microcontroller dan komunikasinya. Sistem led strip ini menyediakan web server yang dibuat dengan menggunakan library AsyncWebServer, sehingga dapat dikontrol dengan menggunakan protokol http. Led strip ini dikontrol dengan sebuah web app yang dibuat dengan menggunakan framework ReactJs dan bahasa Typescript.',
-	},
-	{
 		title: 'GraphQL API (e-Commerce)',
 		images: {
 			count: 3,

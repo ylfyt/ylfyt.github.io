@@ -9,7 +9,7 @@ const About: FC<AboutProps> = () => {
 	return (
 		<div className={`${isLoaded ? 'fade-start' : ''} flex justify-center items-center h-[87vh]`}>
 			<FadeUpComponent order={1}>
-				<div className="neu-in px-6 py-3 text-2xl rounded-full font-semibold text-color0">Coming Soon</div>
+				<div className="neu-in px-6 py-3 text-2xl rounded-full font-semibold text-color0">About</div>
 			</FadeUpComponent>
 		</div>
 	);
