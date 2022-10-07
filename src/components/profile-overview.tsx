@@ -31,7 +31,7 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 						</div>
 						<span className="text-sm">I'm currently working as computer science student and Software Engineer</span>
 					</div>
-					<div className="flex gap-4 flex-col">
+					<div className="flex gap-4 flex-col neu-in py-2 px-5 rounded-2xl">
 						<div className="flex gap-4">
 							<NavItem to="/contacts" className="neu-out flex items-center gap-2 w-fit hover:text-color0 font-semibold">
 								<NeuIcon className="neu-in" icon={<BiPaperPlane />} />
