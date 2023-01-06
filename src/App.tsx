@@ -12,6 +12,8 @@ function getOS() {
 	const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
 	const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
 
+	return `${platform} | ${userAgent}`;
+
 	let dev = '';
 	for (let i = 0; i < userAgent.length; i++) {
 		if (userAgent[i] === ')') {
