@@ -5,43 +5,6 @@ import { COLORS } from './utils/colors';
 import { APP_SCRIPT_URL } from './utils/contants';
 import MainRoute from './pages/_route';
 
-function getOS() {
-	const userAgent = window.navigator.userAgent;
-	const platform = window.navigator.platform;
-	const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
-	const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
-	const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
-
-	return `${platform} | ${userAgent}`;
-
-	let dev = '';
-	for (let i = 0; i < userAgent.length; i++) {
-		if (userAgent[i] === ')') {
-			for (let j = i - 1; j >= 0; j--) {
-				if (userAgent[j] === ';') {
-					break;
-				}
-				dev = userAgent[j] + dev;
-			}
-			break;
-		}
-	}
-
-	let os = '';
-	if (macosPlatforms.indexOf(platform) !== -1) {
-		os = `Mac OS`;
-	} else if (iosPlatforms.indexOf(platform) !== -1) {
-		os = 'iOS';
-	} else if (windowsPlatforms.indexOf(platform) !== -1) {
-		os = 'Windows';
-	} else if (/Android/.test(userAgent)) {
-		os = 'Android';
-	} else if (/Linux/.test(platform)) {
-		os = 'Linux';
-	}
-	return `${os} |${dev}`;
-}
-
 function App() {
 	const routes = useRoutes([MainRoute]);
 	const { isDark } = useRootContext();
@@ -50,7 +13,7 @@ function App() {
 		if (import.meta.env.DEV) return;
 		fetch(APP_SCRIPT_URL, {
 			method: 'POST',
-			body: JSON.stringify({ dev: getOS() }),
+			body: JSON.stringify({ dev: `${navigator.platform}|${navigator.userAgent}` }),
 		});
 	}, []);
 
