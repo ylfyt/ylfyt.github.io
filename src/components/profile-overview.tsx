@@ -29,7 +29,7 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 							<NeuIcon className="text-color0" icon={<HiOutlineDesktopComputer />} />
 							<span className="text-lg font-semibold">Software Engineer</span>
 						</div>
-						<span className="text-sm">I'm currently working as computer science student and Software Engineer</span>
+						<span className="text-sm">I'm currently working as Software Engineer</span>
 					</div>
 					<div className="flex gap-4 flex-col neu-in py-2 px-5 rounded-2xl">
 						<div className="flex gap-4">
