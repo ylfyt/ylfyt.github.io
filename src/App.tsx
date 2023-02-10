@@ -11,10 +11,7 @@ function App() {
 
 	useEffect(() => {
 		if (import.meta.env.DEV) return;
-		fetch(APP_SCRIPT_URL, {
-			method: 'POST',
-			body: 'ok',
-		});
+		fetch(APP_SCRIPT_URL);
 	}, []);
 
 	useEffect(() => {
