@@ -37,14 +37,14 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 								<NeuIcon className="neu-in" icon={<BiPaperPlane />} />
 								Contact me
 							</NavItem>
-							<a target="_blank" href="https://github.com/ylfyt" className="neu-out flex items-center gap-2 px-5 hover:text-color0 font-semibold rounded-lg">
+							<a target="_blank" href="https://www.linkedin.com/in/yudialfayat" className="neu-out flex items-center gap-2 px-5 hover:text-color0 font-semibold rounded-lg">
 								<NeuIcon className="neu-in" icon={<BsFillFileEarmarkPersonFill />} />
 								Resume
 							</a>
 						</div>
 						<div className="flex gap-4">
 							<LinkIcon url="https://github.com/ylfyt" icon={<FaGithub size={24} />} />
-							<LinkIcon url="https://www.linkedin.com/in/yudi-alfayat-6371781b8/" icon={<FaLinkedin size={24} />} />
+							<LinkIcon url="https://www.linkedin.com/in/yudialfayat" icon={<FaLinkedin size={24} />} />
 							<LinkIcon url="mailto:yalfayat@gmail.com" icon={<HiOutlineMail size={24} />} />
 						</div>
 					</div>
