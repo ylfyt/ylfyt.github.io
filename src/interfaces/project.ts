@@ -6,11 +6,10 @@ export interface IRepository {
 
 export interface IProject {
 	title: string;
-	images: {
-		count: number;
-		dir: string;
-	};
+	imageCount: number;
+	imageDir: string;
 	repositories: IRepository[];
 	tags: string[];
 	description: string;
+	createdAt?: Date;
 }

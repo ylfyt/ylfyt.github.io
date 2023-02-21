@@ -3,41 +3,36 @@ import { FaChevronLeft, FaChevronRight, FaSearch } from 'react-icons/fa';
 import Button from './button';
 
 interface ImageSlideShowProps {
-	images: {
-		count: number;
-		dir: string;
-	};
+	images: string[]
 }
 
 const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
-	const [idx, setIdx] = useState(1);
+	const [idx, setIdx] = useState(0);
 	const [direction, setDirection] = useState('');
 	const [fullscreen, setFullscreen] = useState(false);
 
 	const slide = (isNext: boolean) => {
 		setDirection(isNext ? 'animate-slideFromLeft' : 'animate-slideFromRight');
 		let next = isNext ? idx + 1 : idx - 1;
-		if (next > images.count) next = 1;
-		if (next < 1) next = images.count;
+		if (next >= images.length) next = 0;
+		if (next < 0) next = images.length-1;
 		setIdx(next);
 	};
-
-	const ids = [...Array(images.count).keys()].map((i) => i + 1);
 
 	return (
 		<div className="neu-in flex px-4 py-2 rounded-xl justify-center relative overflow-hidden w-full">
 			<div className="flex justify-center w-full">
-				{ids.map((id, i) => {
+				{images.map((path, i) => {
 					return (
-						<div key={i} className={`${id !== idx ? 'hidden' : direction} aspect-video w-full h-full flex items-center justify-center`}>
-							<img className="rounded-xl max-h-full" src={`${images.dir}/${id}.png`} alt="" />
+						<div key={i} className={`${i !== idx ? 'hidden' : direction} aspect-video w-full h-full flex items-center justify-center`}>
+							<img className="rounded-xl max-h-full" src={path} alt="" />
 						</div>
 					);
 				})}
 			</div>
 			<div className="absolute opacity-60 bottom-4 sm:bottom-6 flex gap-3 sm:gap-4">
-				{ids.map((id, i) => {
-					return <div key={i} onClick={() => setIdx(id)} className={`${id === idx ? 'bg-color0' : 'bg-gray-400 hover:cursor-pointer'} hover:scale-125 h-1 w-[20px] sm:w-[50px] rounded-lg`}></div>;
+				{images.map((_, i) => {
+					return <div key={i} onClick={() => setIdx(i)} className={`${i === idx ? 'bg-color0' : 'bg-gray-400 hover:cursor-pointer'} hover:scale-125 h-1 w-[20px] sm:w-[50px] rounded-lg`}></div>;
 				})}
 			</div>
 			<div className="absolute flex justify-between w-full sm:px-6 px-2 top-3/4 sm:top-1/2 -translate-y-1/2">
@@ -59,7 +54,7 @@ const ImageSlideShow: FC<ImageSlideShowProps> = ({ images }) => {
 						<button onClick={() => setFullscreen(false)} className="absolute lg:right-40 lg:top-6 top-2 right-4 text-2xl flex items-center py-0 opacity-60">
 							&#10006;
 						</button>
-						<img className="max-h-[75vh] opacity-100 sm:max-w-[90vw] lg::max-w-[60vw]" src={`${images.dir}/${idx}.png`} alt="" />
+						<img className="max-h-[75vh] opacity-100 sm:max-w-[90vw] lg::max-w-[60vw]" src={images[idx]} alt="" />
 					</div>
 					<div className="fixed bg-gray-500 h-screen w-full z-auto opacity-80"></div>
 				</div>

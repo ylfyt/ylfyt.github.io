@@ -7,7 +7,9 @@ import FadeUpComponent from '../../components/fade-up-component';
 import ImageSlideShow from '../../components/image-slideshow';
 import useLoaded from '../../hooks/use-loaded';
 import { IProject } from '../../interfaces/project';
-import { projects } from '../../utils/db';
+import { useRootContext } from '../../contexts/root';
+import { getDownloadURL, list, ref } from 'firebase/storage';
+import { storage } from '../../utils/firebase';
 
 interface ProjectDetailProps {}
 
@@ -16,16 +18,33 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 	const idx = parseInt(id!);
 	const navigate = useNavigate();
 
+	const { projects } = useRootContext();
 	const isLoaded = useLoaded();
-
 	const [project, setProject] = useState<IProject>();
+	const [images, setImages] = useState<string[]>([]);
 
 	useEffect(() => {
+		if (!projects) return;
+
 		const temp = projects[idx];
 		if (!temp) return navigate('/projects');
 
 		setProject(temp);
 	});
+
+	useEffect(() => {
+		if (!project) return;
+		(async () => {
+			const storageRef = ref(storage, `/projects/${project.imageDir}`);
+			const res = await list(storageRef);
+			const temp: string[] = [];
+			for (const item of res.items) {
+				const url = await getDownloadURL(item);
+				temp.push(url);
+			}
+			setImages(temp);
+		})();
+	}, [project]);
 
 	if (!project) return <div>Loading...</div>;
 
@@ -40,7 +59,7 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 				</div>
 			</FadeUpComponent>
 			<FadeUpComponent order={1}>
-				<ImageSlideShow images={project.images} />
+				<ImageSlideShow images={images} />
 			</FadeUpComponent>
 			<FadeUpComponent order={2}>
 				<div className="w-full flex gap-2 sm:gap-4">
