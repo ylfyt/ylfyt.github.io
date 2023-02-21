@@ -23,6 +23,23 @@ const dbProjects: IProject[] = [
 
 Made with Svelte + Vite + TS + Firebase`,
 	},
+  {
+		title: 'PDF Splitter',
+		images: {
+			count: 1,
+			dir: '/pdf-splitter',
+		},
+		repositories: [
+			{ url: 'https://ylfyt.github.io/pdf-splitter/', label: 'App', type: 'app' },
+			{
+				url: 'https://github.com/ylfyt/pdf-splitter',
+				label: 'Code',
+				type: 'code',
+			},
+		],
+		tags: ['React', 'PDF', 'Typescript', 'Vite'],
+		description: `This app can be used to separate a PDF file into several PDF files. It runs only on the client side, which means users don't need to upload their PDF files to any server. This is very useful for large PDF files.`,
+	},
 	{
 		title: 'ASP.NET Auth Service',
 		images: {
