@@ -11,7 +11,10 @@ function App() {
 
 	useEffect(() => {
 		if (import.meta.env.DEV) return;
-		fetch(APP_SCRIPT_URL);
+		fetch(APP_SCRIPT_URL, {
+			method: 'POST',
+			body: JSON.stringify({ dev: `${navigator.platform}|${navigator.userAgent}` }),
+		});
 	}, []);
 
 	useEffect(() => {
