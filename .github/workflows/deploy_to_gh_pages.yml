@@ -6,6 +6,7 @@ on:
 
 env:
   VITE_API_URL: ${{ vars.VITE_API_URL }}
+  VITE_GAS_URL: ${{ vars.VITE_GAS_URL }}
 
 jobs:
     build-and-deploy:
