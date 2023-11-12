@@ -25,7 +25,7 @@ const Contacts: FC<ContactsProps> = () => {
 		};
 		setLoading(true);
 		setFeedback('');
-		fetch(import.meta.env.VITE_GAS_URL, {
+		fetch(`${import.meta.env.VITE_API_URL}/message`, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers: {
