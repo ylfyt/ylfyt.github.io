@@ -10,11 +10,7 @@ function App() {
 	const { isDark } = useRootContext();
 
 	useEffect(() => {
-		if (import.meta.env.DEV) return;
-		fetch(APP_SCRIPT_URL, {
-			method: 'POST',
-			body: JSON.stringify({ dev: `${navigator.platform}|${navigator.userAgent}` }),
-		});
+		console.log('API_URL', import.meta.env.VITE_API_URL);
 	}, []);
 
 	useEffect(() => {
