@@ -5,7 +5,8 @@ on:
             - 'v*'
 
 env:
-  VITE_API_URL: {{ secrets.VITE_API_URL }}
+  VITE_API_URL: ${{ secrets.VITE_API_URL }}
+  VITE_API_URL_2: $VITE_API_URL_2
 
 jobs:
     build-and-deploy:
