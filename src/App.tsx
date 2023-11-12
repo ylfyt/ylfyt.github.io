@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { useRootContext } from './contexts/root';
 import { COLORS } from './utils/colors';
-import { APP_SCRIPT_URL } from './utils/contants';
 import MainRoute from './pages/_route';
 
 function App() {
@@ -10,8 +9,10 @@ function App() {
 	const { isDark } = useRootContext();
 
 	useEffect(() => {
-		console.log('API_URL', import.meta.env.VITE_API_URL);
-		console.log('API_URL_2', import.meta.env.VITE_API_URL_2);
+		if (import.meta.env.DEV) {
+			return;
+		}
+		fetch(`${import.meta.env.VITE_API_URL}/ping`);
 	}, []);
 
 	useEffect(() => {

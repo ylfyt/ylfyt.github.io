@@ -5,7 +5,6 @@ import Button from '../components/button';
 import FadeUpComponent from '../components/fade-up-component';
 import LinkIcon from '../components/link-icon';
 import useLoaded from '../hooks/use-loaded';
-import { APP_SCRIPT_URL } from '../utils/contants';
 interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
@@ -26,7 +25,7 @@ const Contacts: FC<ContactsProps> = () => {
 		};
 		setLoading(true);
 		setFeedback('');
-		fetch(APP_SCRIPT_URL, {
+		fetch(import.meta.env.VITE_GAS_URL, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers: {
