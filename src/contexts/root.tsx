@@ -1,18 +1,16 @@
 import { createContext, FC, ReactNode, useContext, useEffect, useState } from 'react';
-import { collection, getDocs, query, CollectionReference, orderBy} from 'firebase/firestore';
-import { db } from '../utils/firebase';
 import { IProject } from '../interfaces/project';
 
 interface IRootContext {
 	isDark: boolean;
 	toggleDarkMode: () => void;
-  projects: IProject[] | undefined
+	projects: IProject[] | undefined;
 }
 
 const RootContext = createContext<IRootContext>({
 	isDark: false,
 	toggleDarkMode() {},
-  projects: [] 
+	projects: [],
 });
 
 export const useRootContext = () => {
@@ -24,17 +22,21 @@ interface Props {
 }
 const RootProvider: FC<Props> = ({ children }) => {
 	const [isDark, setIsDark] = useState(false);
-  const [projects, setProjects] = useState<IProject[]>();
+	const [projects, setProjects] = useState<IProject[]>();
 
 	useEffect(() => {
 		(async () => {
-			const projectCollection = collection(db, 'projects') as CollectionReference<IProject>;
-			const snap = await getDocs(query(projectCollection, orderBy('createdAt')))
-      const temp : IProject[] = []
-      snap.forEach((project) => {
-        temp.push(project.data());
-      });
-      setProjects(temp);
+      try {
+        const url = `${import.meta.env.VITE_CDN_PORTFOLIO_BASE_URL}/projects.json`
+        const resp = await fetch(url)
+        if (!resp.ok) {
+          throw new Error(await resp.text())
+        }
+        const temp: IProject[] = await resp.json()
+        setProjects(temp)
+      } catch (error) {
+        console.log("ERROR", error);
+      }
 		})();
 	}, []);
 
@@ -42,7 +44,7 @@ const RootProvider: FC<Props> = ({ children }) => {
 		const dark = localStorage.getItem('dark');
 		if (dark) setIsDark(true);
 	});
-  
+
 	const toggleDarkMode = () => {
 		const dark = !isDark;
 		setIsDark(dark);

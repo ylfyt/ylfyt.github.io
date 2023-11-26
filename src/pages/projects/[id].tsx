@@ -8,8 +8,6 @@ import ImageSlideShow from '../../components/image-slideshow';
 import useLoaded from '../../hooks/use-loaded';
 import { IProject } from '../../interfaces/project';
 import { useRootContext } from '../../contexts/root';
-import { getDownloadURL, list, ref } from 'firebase/storage';
-import { storage } from '../../utils/firebase';
 
 interface ProjectDetailProps {}
 
@@ -35,14 +33,12 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 	useEffect(() => {
 		if (!project) return;
 		(async () => {
-			const storageRef = ref(storage, `/projects/${project.imageDir}`);
-			const res = await list(storageRef);
-			const temp: string[] = [];
-			for (const item of res.items) {
-				const url = await getDownloadURL(item);
-				temp.push(url);
-			}
-			setImages(temp);
+      const temp: string[] = []
+      for (let i = 1; i <= project.imageCount; i++) {
+        const img = `${import.meta.env.VITE_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/${i}.png`
+        temp.push(img)
+      }
+      setImages(temp)
 		})();
 	}, [project]);
 

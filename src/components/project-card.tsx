@@ -1,10 +1,8 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { IoRocketSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { IProject } from '../interfaces/project';
-import { getDownloadURL, ref, list } from 'firebase/storage';
-import { storage } from '../utils/firebase';
 
 interface ProjectCardProps {
 	project: IProject;
@@ -12,24 +10,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project, idx }) => {
-	const [thumbnail, setThumbnail] = useState<string>();
-
-	useEffect(() => {
-		(async () => {
-			const storageRef = ref(storage, `projects/${project.imageDir}`);
-			const res = await list(storageRef);
-			if (res.items.length === 0) return;
-			const url = await getDownloadURL(res.items[0]);  
-			setThumbnail(url);
-		})();
-	}, []);
+  const thumbnailUrl = `${import.meta.env.VITE_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/1.png`
 
 	return (
 		<div className="group neu-out hover:neu-out-long transition-shadow py-3 px-4 rounded-lg flex flex-col gap-4 w-full">
 			<Link to={`/projects/${idx}`} className="flex flex-col gap-2">
 				<div className="flex justify-center">
 					<div className="aspect-video flex items-center justify-center w-full">
-						<img className="max-h-full" src={thumbnail ?? '/images/placeholder.jpg'} alt="" />
+						<img className="max-h-full" src={thumbnailUrl} alt="Project Thumbnail" />
 					</div>
 				</div>
 				<div className="flex flex-col rounded-xl">
