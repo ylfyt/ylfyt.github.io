@@ -5,6 +5,7 @@ import Button from '../components/button';
 import FadeUpComponent from '../components/fade-up-component';
 import LinkIcon from '../components/link-icon';
 import useLoaded from '../hooks/use-loaded';
+import { ENV_GAS_URL } from '../utils/constants';
 interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
@@ -25,7 +26,7 @@ const Contacts: FC<ContactsProps> = () => {
 		};
 		setLoading(true);
 		setFeedback('');
-		fetch(`${import.meta.env.VITE_API_URL}/message`, {
+		fetch(`${ENV_GAS_URL}`, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers: {

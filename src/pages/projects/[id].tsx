@@ -8,6 +8,7 @@ import ImageSlideShow from '../../components/image-slideshow';
 import useLoaded from '../../hooks/use-loaded';
 import { IProject } from '../../interfaces/project';
 import { useRootContext } from '../../contexts/root';
+import { ENV_CDN_PORTFOLIO_BASE_URL } from '../../utils/constants';
 
 interface ProjectDetailProps {}
 
@@ -33,12 +34,12 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 	useEffect(() => {
 		if (!project) return;
 		(async () => {
-      const temp: string[] = []
-      for (let i = 1; i <= project.imageCount; i++) {
-        const img = `${import.meta.env.VITE_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/${i}.png`
-        temp.push(img)
-      }
-      setImages(temp)
+			const temp: string[] = [];
+			for (let i = 1; i <= project.imageCount; i++) {
+				const img = `${ENV_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/${i}.png`;
+				temp.push(img);
+			}
+			setImages(temp);
 		})();
 	}, [project]);
 

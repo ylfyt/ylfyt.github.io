@@ -5,7 +5,6 @@ on:
             - 'v*'
 
 env:
-  VITE_API_URL: ${{ vars.VITE_API_URL }}
   VITE_GAS_URL: ${{ vars.VITE_GAS_URL }}
   VITE_CDN_PORTFOLIO_BASE_URL: ${{ vars.VITE_CDN_PORTFOLIO_BASE_URL }}
 

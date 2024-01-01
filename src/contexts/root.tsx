@@ -1,5 +1,6 @@
 import { createContext, FC, ReactNode, useContext, useEffect, useState } from 'react';
 import { IProject } from '../interfaces/project';
+import { ENV_CDN_PORTFOLIO_BASE_URL } from '../utils/constants';
 
 interface IRootContext {
 	isDark: boolean;
@@ -26,17 +27,17 @@ const RootProvider: FC<Props> = ({ children }) => {
 
 	useEffect(() => {
 		(async () => {
-      try {
-        const url = `${import.meta.env.VITE_CDN_PORTFOLIO_BASE_URL}/projects.json`
-        const resp = await fetch(url)
-        if (!resp.ok) {
-          throw new Error(await resp.text())
-        }
-        const temp: IProject[] = await resp.json()
-        setProjects(temp)
-      } catch (error) {
-        console.log("ERROR", error);
-      }
+			try {
+				const url = `${ENV_CDN_PORTFOLIO_BASE_URL}/projects.json`;
+				const resp = await fetch(url);
+				if (!resp.ok) {
+					throw new Error(await resp.text());
+				}
+				const temp: IProject[] = await resp.json();
+				setProjects(temp);
+			} catch (error) {
+				console.log('ERROR', error);
+			}
 		})();
 	}, []);
 

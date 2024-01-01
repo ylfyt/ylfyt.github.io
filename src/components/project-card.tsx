@@ -3,6 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { IoRocketSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { IProject } from '../interfaces/project';
+import { ENV_CDN_PORTFOLIO_BASE_URL } from '../utils/constants';
 
 interface ProjectCardProps {
 	project: IProject;
@@ -10,7 +11,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project, idx }) => {
-  const thumbnailUrl = `${import.meta.env.VITE_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/1.png`
+	const thumbnailUrl = `${ENV_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/1.png`;
 
 	return (
 		<div className="group neu-out hover:neu-out-long transition-shadow py-3 px-4 rounded-lg flex flex-col gap-4 w-full">

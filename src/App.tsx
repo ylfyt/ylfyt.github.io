@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { useRootContext } from './contexts/root';
 import { COLORS } from './utils/colors';
+import { ENV_GAS_URL } from './utils/constants';
 import MainRoute from './pages/_route';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 		if (import.meta.env.DEV) {
 			return;
 		}
-		fetch(`${import.meta.env.VITE_API_URL}/ping`);
+		fetch(`${ENV_GAS_URL}`);
 	}, []);
 
 	useEffect(() => {
