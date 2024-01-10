@@ -55,7 +55,7 @@ const Contacts: FC<ContactsProps> = () => {
 	return (
 		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 flex justify-center flex-col items-center gap-12`}>
 			<FadeUpComponent order={1}>
-				<div className="sm:w-2/3 w-full flex flex-col items-center gap-4">
+				<div className="sm:w-2/3 w-full flex flex-col items-center gap-10 mt-4">
 					<div className="text-2xl font-semibold neu-in px-4 py-2 rounded-3xl text-color0">Contact Me</div>
 					<form
 						onSubmit={(e) => {
