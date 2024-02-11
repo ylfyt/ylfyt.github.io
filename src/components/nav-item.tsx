@@ -1,5 +1,6 @@
-import { FC, ReactNode } from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FC, ReactNode } from "react";
 
 interface NavItemProps {
 	children?: ReactNode;
@@ -7,11 +8,13 @@ interface NavItemProps {
 	className?: string;
 }
 
-const NavItem: FC<NavItemProps> = ({ children, className = '', to }) => {
+const NavItem: FC<NavItemProps> = ({ children, className = "", to }) => {
+	const pathname = usePathname();
+
 	return (
-		<NavLink to={to} className={({ isActive }) => (isActive ? 'neu-in text-color0' : 'hover:neu-out') + ` font-semibold py-2 px-5 rounded-lg ${className}`}>
+		<Link href={to} className={`${pathname === to ? "neu-in text-color0" : "hover:neu-out"} font-semibold py-2 px-5 rounded-lg ${className}`}>
 			{children}
-		</NavLink>
+		</Link>
 	);
 };
 

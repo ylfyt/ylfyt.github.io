@@ -1,5 +1,6 @@
-import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FC } from "react";
 
 interface NavItemIconProps {
 	to: string;
@@ -8,14 +9,12 @@ interface NavItemIconProps {
 }
 
 const NavItemIcon: FC<NavItemIconProps> = ({ to, icon, label }) => {
+	const pathname = usePathname();
 	return (
-		<NavLink
-			to={to}
-			className={({ isActive }) => (isActive ? 'neu-in text-color0' : 'neu-out hover:text-color0') + ` flex flex-col items-center justify-center h-[60px] aspect-square rounded-full font-normal`}
-		>
+		<Link href={to} className={`${to === pathname ? "neu-in text-color0" : "neu-out hover:text-color0"} flex flex-col items-center justify-center h-[60px] aspect-square rounded-full font-normal`}>
 			<div className="text-2xl">{icon}</div>
 			<span className="text-[10px]">{label}</span>
-		</NavLink>
+		</Link>
 	);
 };
 

@@ -17,7 +17,7 @@ const ProfileOverview: FC<ProfileOverviewProps> = () => {
 			<FadeUpComponent order={1}>
 				<div className="w-full sm:w-1/3 md:w-2/3 flex items-center justify-center ml-auto mr-auto">
 					<div className="neu-out w-fit rounded-full p-4">
-						<img className="w-[250px] aspect-square rounded-full" src={`${import.meta.env.BASE_URL}profile.jpg`} alt="profile" />
+						<img className="w-[250px] aspect-square rounded-full" src={`/profile.jpg`} alt="profile" />
 					</div>
 				</div>
 			</FadeUpComponent>

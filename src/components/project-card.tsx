@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { IoRocketSharp } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
 import { IProject } from '../interfaces/project';
 import { ENV_CDN_PORTFOLIO_BASE_URL } from '../utils/constants';
+import Link from 'next/link';
 
 interface ProjectCardProps {
 	project: IProject;
@@ -15,7 +15,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, idx }) => {
 
 	return (
 		<div className="group neu-out hover:neu-out-long transition-shadow py-3 px-4 rounded-lg flex flex-col gap-4 w-full">
-			<Link to={`/projects/${idx}`} className="flex flex-col gap-2">
+			<Link href={`/projects/${idx}`} className="flex flex-col gap-2">
 				<div className="flex justify-center">
 					<div className="aspect-video flex items-center justify-center w-full">
 						<img className="max-h-full" src={thumbnailUrl} alt="Project Thumbnail" />

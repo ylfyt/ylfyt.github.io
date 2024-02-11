@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, FC, ReactNode, useContext, useEffect, useState } from 'react';
 import { IProject } from '../interfaces/project';
 import { ENV_CDN_PORTFOLIO_BASE_URL } from '../utils/constants';

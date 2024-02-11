@@ -1,8 +1,10 @@
-import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
-import { FaClipboardList, FaHome, FaPhone, FaUser } from 'react-icons/fa';
-import { useRootContext } from '../contexts/root';
-import Button from './button';
-import NavItemIcon from './nav-item-icon';
+"use client";
+
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { FaClipboardList, FaHome, FaPhone, FaUser } from "react-icons/fa";
+import { useRootContext } from "../contexts/root";
+import Button from "./button";
+import NavItemIcon from "./nav-item-icon";
 
 const MobileNavbar = () => {
 	const { toggleDarkMode, isDark } = useRootContext();

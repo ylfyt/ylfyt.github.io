@@ -5,8 +5,8 @@ on:
             - 'v*'
 
 env:
-  VITE_GAS_URL: ${{ vars.VITE_GAS_URL }}
-  VITE_CDN_PORTFOLIO_BASE_URL: ${{ vars.VITE_CDN_PORTFOLIO_BASE_URL }}
+  NEXT_PUBLIC_GAS_URL: ${{ vars.NEXT_GAS_URL }}
+  NEXT_PUBLIC_CDN_PORTFOLIO_BASE_URL: ${{ vars.NEXT_CDN_PORTFOLIO_BASE_URL }}
 
 jobs:
     build-and-deploy:
