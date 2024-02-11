@@ -1,21 +1,24 @@
-import { FC, useEffect, useState } from 'react';
-import { BiLeftArrowAlt } from 'react-icons/bi';
-import { FaGithub } from 'react-icons/fa';
-import { IoRocketSharp } from 'react-icons/io5';
-import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import FadeUpComponent from '../../components/fade-up-component';
-import ImageSlideShow from '../../components/image-slideshow';
-import useLoaded from '../../hooks/use-loaded';
-import { IProject } from '../../interfaces/project';
-import { useRootContext } from '../../contexts/root';
-import { ENV_CDN_PORTFOLIO_BASE_URL } from '../../utils/constants';
+"use client";
+
+import { FC, useEffect, useState } from "react";
+import { BiLeftArrowAlt } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
+import { IoRocketSharp } from "react-icons/io5";
+import FadeUpComponent from "@/components/fade-up-component";
+import ImageSlideShow from "@/components/image-slideshow";
+import useLoaded from "@/hooks/use-loaded";
+import { IProject } from "@/interfaces/project";
+import { useRootContext } from "@/contexts/root";
+import { ENV_CDN_PORTFOLIO_BASE_URL } from "@/utils/constants";
+import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface ProjectDetailProps {}
 
 const ProjectDetail: FC<ProjectDetailProps> = () => {
-	const id = useParams<'id'>().id;
+	const id = useParams<{ id: string }>().id;
 	const idx = parseInt(id!);
-	const navigate = useNavigate();
+	const navigate = useRouter();
 
 	const { projects } = useRootContext();
 	const isLoaded = useLoaded();
@@ -26,33 +29,35 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 		if (!projects) return;
 
 		const temp = projects[idx];
-		if (!temp) return navigate('/projects');
+		if (!temp) {
+			navigate.replace("/projects");
+			return;
+		}
 
 		setProject(temp);
-	});
+	}, [projects]);
 
 	useEffect(() => {
 		if (!project) return;
-		(async () => {
-			const temp: string[] = [];
-			for (let i = 1; i <= project.imageCount; i++) {
-				const img = `${ENV_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/${i}.png`;
-				temp.push(img);
-			}
-			setImages(temp);
-		})();
+
+		const temp: string[] = [];
+		for (let i = 1; i <= project.imageCount; i++) {
+			const img = `${ENV_CDN_PORTFOLIO_BASE_URL}/project-imgs/${project.imageDir}/${i}.png`;
+			temp.push(img);
+		}
+		setImages(temp);
 	}, [project]);
 
 	if (!project) return <div>Loading...</div>;
 
 	return (
-		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 pb-32 flex flex-col gap-4`}>
+		<div className={`${isLoaded ? "fade-start" : ""} pt-4 pb-32 flex flex-col gap-4`}>
 			<FadeUpComponent order={1}>
 				<div className="flex justify-end w-full sm:justify-start">
-					<NavLink to="/projects" className="neu-out hover:text-color0 w-fit px-4 py-1 rounded-3xl flex items-center">
+					<Link href="/projects" className="neu-out hover:text-color0 w-fit px-4 py-1 rounded-3xl flex items-center">
 						<BiLeftArrowAlt className="text-2xl" />
 						Back to Projects
-					</NavLink>
+					</Link>
 				</div>
 			</FadeUpComponent>
 			<FadeUpComponent order={1}>
@@ -63,8 +68,8 @@ const ProjectDetail: FC<ProjectDetailProps> = () => {
 					{project.repositories.map((repo, idx) => {
 						return (
 							<a key={idx} href={repo.url} target="_blank" className="flex items-center gap-2 rounded-2xl py-1 px-3 neu-out hover:text-color0 text-xl">
-								{repo.type === 'app' ? <IoRocketSharp className="text-color0" /> : <FaGithub className="text-color0" />}
-								<span className="font-semibold text-sm underline">{repo.label || 'Source Code'}</span>
+								{repo.type === "app" ? <IoRocketSharp className="text-color0" /> : <FaGithub className="text-color0" />}
+								<span className="font-semibold text-sm underline">{repo.label || "Source Code"}</span>
 							</a>
 						);
 					})}

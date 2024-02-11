@@ -2,6 +2,7 @@
     "name": "ylfyt.github.io",
     "private": true,
     "version": "3.0.0",
+    "type": "module",
     "scripts": {
         "dev": "next dev",
         "build": "next build",

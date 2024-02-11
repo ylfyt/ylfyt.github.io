@@ -4,7 +4,7 @@ const darkShadowColor = '#070a10';
 const darkReflectColor = '#1b263e';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	content: ['./src/**/*.{html,js,jsx,tsx}'],
 	darkMode: 'class',
 	theme: {

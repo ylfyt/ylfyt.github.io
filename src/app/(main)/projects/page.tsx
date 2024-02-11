@@ -1,8 +1,9 @@
-import { FC } from 'react';
-import FadeUpComponent from '../../components/fade-up-component';
-import ProjectCard from '../../components/project-card';
-import useLoaded from '../../hooks/use-loaded';
-import { useRootContext } from '../../contexts/root';
+"use client";
+import { FC } from "react";
+import FadeUpComponent from "@/components/fade-up-component";
+import ProjectCard from "@/components/project-card";
+import useLoaded from "@/hooks/use-loaded";
+import { useRootContext } from "@/contexts/root";
 
 interface ProjectsProps {}
 
@@ -11,7 +12,7 @@ const Projects: FC<ProjectsProps> = () => {
 	const isLoaded = useLoaded();
 
 	return (
-		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 pb-32 flex flex-col gap-4`}>
+		<div className={`${isLoaded ? "fade-start" : ""} pt-4 pb-32 flex flex-col gap-4`}>
 			<FadeUpComponent order={1}>
 				<div className="flex justify-start w-full sm:hidden">
 					<div className="neu-out text-color0 w-fit px-4 py-1 rounded-3xl flex items-center font-semibold">Projects</div>

@@ -12,11 +12,6 @@ interface HomeProps {}
 const Home: FC<HomeProps> = () => {
 	const { projects: oldProjects } = useRootContext();
 	const [projects, setProjects] = useState<IProject[]>([]);
-	const { isDark } = useRootContext();
-
-	useEffect(() => {
-		isDark ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
-	}, [isDark]);
 
 	useEffect(() => {
 		if (!oldProjects) return;

@@ -1,22 +1,24 @@
-import { FC, useState } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
-import Button from '../components/button';
-import FadeUpComponent from '../components/fade-up-component';
-import LinkIcon from '../components/link-icon';
-import useLoaded from '../hooks/use-loaded';
-import { ENV_GAS_URL } from '../utils/constants';
+"use client";
+
+import { FC, useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import Button from "@/components/button";
+import FadeUpComponent from "@/components/fade-up-component";
+import LinkIcon from "@/components/link-icon";
+import useLoaded from "@/hooks/use-loaded";
+import { ENV_GAS_URL } from "@/utils/constants";
 interface ContactsProps {}
 
 const Contacts: FC<ContactsProps> = () => {
 	const isLoaded = useLoaded();
 
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
 
-	const [feedback, setFeedback] = useState('');
+	const [feedback, setFeedback] = useState("");
 
 	const handleSubmit = async () => {
 		const data = {
@@ -25,27 +27,27 @@ const Contacts: FC<ContactsProps> = () => {
 			message,
 		};
 		setLoading(true);
-		setFeedback('');
+		setFeedback("");
 		fetch(`${ENV_GAS_URL}`, {
-			method: 'POST',
+			method: "POST",
 			body: JSON.stringify(data),
 			headers: {
-				'Content-type': 'text/plain',
+				"Content-type": "text/plain",
 			},
 		})
 			.then((result) => result.json())
 			.then((result) => {
 				if (!result?.success) {
-					setFeedback('Failed to send');
+					setFeedback("Failed to send");
 					return;
 				}
-				setEmail('');
-				setName('');
-				setMessage('');
-				setFeedback('Message sent');
+				setEmail("");
+				setName("");
+				setMessage("");
+				setFeedback("Message sent");
 			})
 			.catch(() => {
-				setFeedback('Failed to send');
+				setFeedback("Failed to send");
 			})
 			.finally(() => {
 				setLoading(false);
@@ -53,7 +55,7 @@ const Contacts: FC<ContactsProps> = () => {
 	};
 
 	return (
-		<div className={`${isLoaded ? 'fade-start' : ''} pt-4 flex justify-center flex-col items-center gap-12`}>
+		<div className={`${isLoaded ? "fade-start" : ""} pt-4 flex justify-center flex-col items-center gap-12`}>
 			<FadeUpComponent order={1}>
 				<div className="sm:w-2/3 w-full flex flex-col items-center gap-10 mt-4">
 					<div className="text-2xl font-semibold neu-in px-4 py-2 rounded-3xl text-color0">Contact Me</div>
