@@ -27,6 +27,7 @@
 
 <svelte:head>
     <title>Yudi Alfayat</title>
+    <meta name="description" content="Yudi Alfayat's Portfolio website" />
 </svelte:head>
 
 <div>

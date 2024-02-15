@@ -49,13 +49,13 @@
                     </a>
                 </div>
                 <div class="flex gap-4">
-                    <LinkIcon url="https://github.com/ylfyt">
+                    <LinkIcon ariaLabel="Github Profile" url="https://github.com/ylfyt">
                         <Icon icon="skill-icons:github-light" />
                     </LinkIcon>
-                    <LinkIcon url="https://www.linkedin.com/in/yudialfayat">
+                    <LinkIcon ariaLabel="Linkedin Profile" url="https://www.linkedin.com/in/yudialfayat">
                         <Icon icon="logos:linkedin-icon" />
                     </LinkIcon>
-                    <LinkIcon url="mailto:yalfayat@gmail.com">
+                    <LinkIcon ariaLabel="Email Address" url="mailto:yalfayat@gmail.com">
                         <Icon icon="skill-icons:gmail-light" />
                     </LinkIcon>
                 </div>

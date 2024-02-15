@@ -14,6 +14,7 @@
             <Button
                 onClick={() => isDark.update((prev) => !prev)}
                 class="neu-out neu-out-active rounded-full p-2 text-yellow-400"
+                ariaLabel={$isDark ? 'Swith to light' : 'Switch to dark'}
             >
                 {#if $isDark}
                     <Icon icon="emojione:crescent-moon" />

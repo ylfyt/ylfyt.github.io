@@ -14,6 +14,6 @@
         {/each}
     </div>
     <div class="flex justify-center">
-        <NavItem href="/projects" class="neu-out px-20 py-1 text-sm hover:text-color0">See More</NavItem>
+        <NavItem href="/projects" class="neu-out px-20 py-1 text-sm hover:text-color0">See More Projects</NavItem>
     </div>
 </div>
