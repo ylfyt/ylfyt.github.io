@@ -8,7 +8,7 @@
 </script>
 
 <div class="neu-out hover:neu-out-long group flex w-full flex-col gap-4 rounded-lg px-4 py-3 transition-shadow">
-    <a href={`/projects/${idx}`} class="flex flex-col gap-2">
+    <a href={`/whoami/projects/${idx}`} class="flex flex-col gap-2">
         <div class="flex justify-center">
             <div class="flex aspect-video w-full items-center justify-center">
                 <img

@@ -45,7 +45,7 @@
     {:else}
         <FadeUpComponent order={1}>
             <div class="flex w-full justify-end sm:justify-start">
-                <a href="/projects" class="neu-out flex w-fit items-center rounded-3xl px-4 py-1 hover:text-color0">
+                <a href="/whoami/projects" class="neu-out flex w-fit items-center rounded-3xl px-4 py-1 hover:text-color0">
                     <Icon icon="mingcute:arrow-left-fill" />
                     Back to Projects
                 </a>

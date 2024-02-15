@@ -29,7 +29,7 @@
             <div class="neu-in flex flex-col gap-4 rounded-2xl px-5 py-2">
                 <div class="flex gap-4">
                     <NavItem
-                        href="/contacts"
+                        href="/whoami/contacts"
                         class="neu-out flex w-fit items-center gap-2 font-semibold hover:text-color0"
                     >
                         <NeuIcon class="neu-in">

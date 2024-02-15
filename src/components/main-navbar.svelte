@@ -9,7 +9,7 @@
     class="sticky top-0 z-40 flex min-h-[60px] justify-center bg-light opacity-90 shadow-md hover:opacity-100 dark:bg-dark"
 >
     <div class="flex w-[1024px] items-center justify-between px-12">
-        <a href="/" class="text-2xl font-semibold text-color0"> Yudi </a>
+        <a href="/whoami" class="text-2xl font-semibold text-color0"> Yudi </a>
         <div class="flex items-center gap-5">
             <Button
                 onClick={() => isDark.update((prev) => !prev)}
@@ -23,10 +23,10 @@
                 {/if}
             </Button>
 
-            <NavItem href="/">Home</NavItem>
-            <NavItem href="/projects">Projects</NavItem>
-            <NavItem href="/about">About</NavItem>
-            <NavItem href="/contacts">Contacts</NavItem>
+            <NavItem href="/whoami">Home</NavItem>
+            <NavItem href="/whoami/projects">Projects</NavItem>
+            <NavItem href="/whoami/about">About</NavItem>
+            <NavItem href="/whoami/contacts">Contacts</NavItem>
         </div>
     </div>
 </nav>
