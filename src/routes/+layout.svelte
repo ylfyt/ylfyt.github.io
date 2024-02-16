@@ -8,6 +8,4 @@
     }
 </script>
 
-{#if browser}
-    <slot />
-{/if}
+<slot />
