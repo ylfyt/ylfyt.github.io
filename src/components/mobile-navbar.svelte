@@ -9,19 +9,19 @@
     class="fixed bottom-0 z-30 flex w-full items-center bg-light py-2 shadow-[-2px_-2px_10px_rgba(0,0,0,0.2)] dark:bg-dark"
 >
     <div class="flex flex-1 items-center justify-evenly">
-        <NavItemIcon href="/">
+        <NavItemIcon href="/whoami">
             <Icon style="font-size: 1.5em;" icon="fa:home" slot="icon" />
             <span class="text-[10px]">Home</span>
         </NavItemIcon>
-        <NavItemIcon href="/projects">
+        <NavItemIcon href="/whoami/projects">
             <Icon style="font-size: 1.5em;" icon="solar:clipboard-bold" slot="icon" />
             <span class="text-[10px]">Project</span>
         </NavItemIcon>
-        <NavItemIcon href="/about">
+        <NavItemIcon href="/whoami/about">
             <Icon style="font-size: 1.5em;" icon="fa:user" slot="icon" />
             <span class="text-[10px]">About</span>
         </NavItemIcon>
-        <NavItemIcon href="/contacts">
+        <NavItemIcon href="/whoami/contacts">
             <Icon style="font-size: 1.5em;" icon="streamline:phone-solid" slot="icon" />
             <span class="text-[10px]">Contact</span>
         </NavItemIcon>
