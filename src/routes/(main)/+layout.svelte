@@ -3,11 +3,12 @@
     import MobileNavbar from '@/components/mobile-navbar.svelte';
     import { projects } from '@/stores/projects';
     import type { Project } from '@/types/project';
-    import { ENV_CDN_PORTFOLIO_BASE_URL, ENV_GAS_URL } from '@/utils/constants';
+    import { ENV, ENV_CDN_PORTFOLIO_BASE_URL, ENV_GAS_URL } from '@/utils/constants';
     import { onMount } from 'svelte';
 
     onMount(async () => {
         if (import.meta.env.PROD) {
+            fetch(`${ENV.BACKEND_BASE_URL}/ping`);
             fetch(`${ENV_GAS_URL}`);
         }
 
